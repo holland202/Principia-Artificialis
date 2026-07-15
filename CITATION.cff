@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Principia Artificialis: Mathematics of Artificial Thought"
+authors:
+  - family-names: Holland
+    given-names: Chad
+repository-code: "https://github.com/holland202/Principia-Artificialis"
+url: "https://github.com/holland202/Principia-Artificialis"
+date-released: "2026-07-15"
+version: "0.1.0"
