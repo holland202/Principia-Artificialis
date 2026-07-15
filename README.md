@@ -1,31 +1,21 @@
 # Principia Artificialis
 
-An open research program exploring the mathematics of artificial thought.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## What is this?
+An open, collaborative research program on the **mathematics of artificial thought**.
 
-What is the mathematics of artificial thought?
+## Vision
 
-Not consciousness. Not AGI. Not philosophy.
+Transform fragmented discussions into a living repository of mathematical frameworks, experiments, and community contributions for understanding AI inference at a deep level.
 
-The computation itself.
+## Quick Start
 
-Modern AI systems transform internal states through billions of tensor operations every second, yet we still describe that process with words like "prediction" or "next-token generation." We suspect those descriptions are incomplete.
+1. Explore [Research Notes](research_notes/)
+2. Check open [Issues](https://github.com/holland202/Principia-Artificialis/issues) for research problems
+3. Join [Discussions](https://github.com/holland202/Principia-Artificialis/discussions)
 
-This repository hosts a living, collaborative research effort using tools from information geometry, topology, dynamical systems, thermodynamics, and more.
+## Structure
 
-## Research Notes
+See the directory tree in the original proposal.
 
-See the `research_notes/` directory for weekly notes.
-
-## How to Contribute
-
-See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## License
-
-See [LICENSE](LICENSE)
-
-## Roadmap
-
-See [ROADMAP.md](ROADMAP.md)
+**Join us** in building this framework!
