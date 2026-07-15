@@ -1,3 +1,5 @@
 # Simulations
 
-Code and results for mathematical models of thought.
+Computational explorations of the mathematical ideas.
+
+- topology_example.py (placeholder)

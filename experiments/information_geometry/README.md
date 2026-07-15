@@ -1,0 +1,1 @@
+Experiments related to information geometry applied to model internals.
