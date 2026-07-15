@@ -1,3 +1,3 @@
 # Whitepapers
 
-Compiled volumes of research notes.
+Compiled volumes. Start with Volume I once several notes are ready.

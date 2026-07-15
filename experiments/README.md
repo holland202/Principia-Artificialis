@@ -1,3 +1,5 @@
 # Experiments
 
-Directory for simulations, benchmarks, and validation studies.
+Place Jupyter notebooks, scripts, and results here.
+
+Example subdirs: `topology/`, `information_geometry/`, `cognition/`
