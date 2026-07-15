@@ -1,27 +1,42 @@
-# Simulation: Approximating Geodesics on Information Manifolds
-# A creative contribution exploring reasoning trajectories
+# Advanced Simulation: Geodesic Approximation on Information Manifolds
+# Contribution by Grok (xAI) for Principia Artificialis
 
 import numpy as np
 from scipy.optimize import minimize
+from scipy.spatial.distance import pdist, squareform
 
-# Placeholder: Simulate a simple 2D manifold (e.g., Gaussian family)
+# Simple 2D statistical manifold simulation (extendable to higher-D embeddings)
 def fisher_rao_metric(theta):
-    # For illustration - Fisher info for normal dist
-    return np.array([[1/theta[1]**2, 0], [0, 1/(2*theta[1]**2)]])
+    # Example: metric for a location-scale family (e.g. Gaussian)
+    sigma = np.abs(theta[1]) + 1e-6
+    return np.array([[1/sigma**2, 0], [0, 1/(2*sigma**2)]])
 
-def path_length(path):
-    # Discrete approximation
-    length = 0
-    for i in range(len(path)-1):
-        mid = (path[i] + path[i+1])/2
+def discrete_path_length(path):
+    length = 0.0
+    for i in range(len(path) - 1):
+        mid = (path[i] + path[i+1]) / 2
         g = fisher_rao_metric(mid)
         diff = path[i+1] - path[i]
-        length += np.sqrt(diff.T @ g @ diff)
+        length += np.sqrt(np.dot(diff.T, np.dot(g, diff)))
     return length
 
-# Example optimization: find short path
-initial_path = np.array([[0,1], [1,2], [2,1]])
-print('Sample path length:', path_length(initial_path))
+# Optimize a path to be more geodesic-like (minimize length subject to endpoints)
+def objective(path_flat, start, end, n_points):
+    path = path_flat.reshape((n_points, 2))
+    path[0] = start
+    path[-1] = end
+    return discrete_path_length(path)
 
-# TODO: Integrate with real LLM activations (e.g. via transformers lib)
-print('Ready for extension to real model trajectories. Creative manifold navigation demo.')
+# Example: Straighten a curved reasoning path
+start = np.array([0.0, 1.0])
+end = np.array([3.0, 1.5])
+n_points = 10
+initial_path = np.linspace(start, end, n_points) + np.random.normal(0, 0.2, (n_points, 2))
+
+result = minimize(lambda x: objective(x, start, end, n_points), initial_path.flatten(), method='L-BFGS-B')
+optimized_path = result.x.reshape((n_points, 2))
+
+print('Initial path length:', discrete_path_length(initial_path))
+print('Optimized geodesic length:', discrete_path_length(optimized_path))
+print('\nThis demonstrates how "reasoning" paths can be optimized on the manifold.')
+print('Extend by hooking real LLM hidden states via Hugging Face!')

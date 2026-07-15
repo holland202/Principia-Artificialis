@@ -1,0 +1,4 @@
+numpy
+scipy
+# transformers  # for real LLM integration
+# gudhi         # for topology
