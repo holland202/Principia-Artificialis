@@ -123,3 +123,39 @@ If you use this framework in your research, please cite:
   year = {2026},
   license = {MIT}
 }
+
+### Computed Simulations
+
+**Renormalization Group Flow Trajectory — Simulation #002**
+This diagram illustrates the topological shearing of probabilistic noise. As the state vector moves from the UV scale (high token density) to the IR scale (collapsed truth-signal), the Information Bottleneck applies the $\Delta G < 0$ constraint, mathematically purging topological holes ($\beta_1 > 0$) to enforce a deterministic geodesic.
+
+```mermaid
+graph TD
+    subgraph UV [UV Scale: High-Dimensional Token Space]
+        T[T > 38.5°C: Thermal Noise]
+        S[Stochastic Trajectories]
+        H[β₁ > 0: Topological Holes]
+    end
+    
+    subgraph Flow [Renormalization Group Flow / Veritas Gate]
+        G{Gibbs Energy Gate: ΔG < 0}
+        M(Minkowski Metric Projection)
+        K{Fisher Information Audit: MSE < 0.10}
+    end
+    
+    subgraph IR [IR Scale: Deterministic Logic Core]
+        C[Simply Connected Manifold: β₁=0, β₂=0]
+        L[Low-Rank Identity Operator: UV^T]
+        Truth((Truth-Signal Crystallization))
+    end
+    
+    S --> G
+    T -.->|ATOMIC_REDUCTION_COLLAPSE| M
+    H -->|Adversarial Pruning| G
+    G -->|Stable T| M
+    G -->|Entropy > θ| H
+    M --> K
+    K -->|Pass| C
+    K -->|Fail| H
+    C --> L
+    L --> Truth
