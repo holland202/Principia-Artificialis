@@ -80,7 +80,17 @@ This is not an engineering repository. It is a **living mathematical framework**
 ## Visualizations
 
 ### Computed Figures (Available)
+![Quantum geodesic flow](figures/quantum_geodesic_flow.gif)
 
+*Quantum geodesic flow on an information manifold: reasoning trajectories as geodesics in Fisher-Rao / QFI geometry.*
+
+![RG flow animated](figures/rg_flow_animated.gif)
+
+*RG flow to trivial and critical fixed points: effective theory evolution under coarse-graining.*
+
+![Entanglement landscape](figures/entanglement_landscape.gif)
+
+*Entanglement entropy landscape across layers and tokens: breathing pattern during inference.*
 These figures were generated from actual data and code in this repository:
 
 | Figure | Source Note | Description |
