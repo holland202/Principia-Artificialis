@@ -1,56 +1,82 @@
-import os
-import time
-import math
+#!/usr/bin/env python3
+"""
+Exp #001: Entropy Production Monitoring Protocol
+Contribution by Perplexity
+Standalone, append-only experiment script that logs SoC temperature and a Gibbs-inspired proxy.
+"""
+
+import csv
 import gc
+import time
+from datetime import datetime, timezone
+import os
 
-# TGCR_V1: Thermodynamic Geodesic Cognitive Runtime
-# SUBSTRATE: Snapdragon 8 Elite / 12GB LPDDR5X
-
-THERMAL_CEILING_C = 38.5
-MEMORY_WALL_SATURATION = 0.85
+# Configurable parameters
+THERMAL_CEILING_C = float(os.getenv("THERMAL_CEILING_C", "38.5"))
+SAMPLE_INTERVAL_S = float(os.getenv("SAMPLE_INTERVAL_S", "2.0"))
+OUT_CSV = os.getenv("OUT_CSV", "data/exp001_entropy_log.csv")
 
 def poll_soc_temperature():
-    """Attempt to read hardware thermal zones in Termux, fallback to nominal."""
-    try:
-        with open("/sys/class/thermal/thermal_zone0/temp", "r") as f:
-            temp = int(f.read().strip())
-            return (temp / 1000.0) if temp > 1000 else temp
-    except FileNotFoundError:
-        return 34.2  # Deterministic nominal fallback
+    """Attempt common thermal zone paths used on Linux/Android. Fallback to deterministic nominal."""
+    paths = [
+        "/sys/class/thermal/thermal_zone0/temp",
+        "/sys/class/thermal/thermal_zone1/temp",
+        "/sys/class/thermal/thermal_zone2/temp",
+    ]
+    for path in paths:
+        try:
+            with open(path, "r") as f:
+                raw = f.read().strip()
+            temp = int(raw)
+            return temp / 1000.0 if temp > 1000 else float(temp)
+        except Exception:
+            continue
+    # deterministic fallback for simulation or unsupported environment
+    return 34.2
 
-def calculate_gibbs_free_energy(temp_c, delta_H=120.0, delta_S=0.35, lambda_hope=0.05):
-    """Calculate ΔG = ΔH - T(ΔS + λ_hope) to gate probability collapse."""
+def calculate_gibbs_proxy(temp_c, delta_h=120.0, delta_s=0.35, lambda_hope=0.05):
+    """Simple Gibbs-like proxy: ΔG = ΔH - T(ΔS + λ)."""
     temp_k = temp_c + 273.15
-    delta_G = delta_H - (temp_k * (delta_S + lambda_hope))
-    return delta_G
+    return delta_h - temp_k * (delta_s + lambda_hope)
 
-def veritas_gate_execution():
-    print("INITIATING SOVEREIGN_LOGIC_CORE THERMAL POLL...")
-    print(f"THERMAL CEILING: {THERMAL_CEILING_C}°C")
-    print("-" * 50)
-    
-    try:
-        while True:
-            t_c = poll_soc_temperature()
-            delta_g = calculate_gibbs_free_energy(t_c)
-            
-            print(f"[STATE] T: {t_c:.2f}°C | ΔG: {delta_g:.4f} J/mol")
-            
-            if t_c >= THERMAL_CEILING_C:
-                print(">>> [CRITICAL] 38.5°C CEILING BREACHED.")
-                print(">>> EXECUTING ATOMIC_REDUCTION_COLLAPSE...")
-                gc.collect() # Residue Flush
-                time.sleep(5) # Thermal throttle
-            elif delta_g > 0:
-                print(">>> [WARNING] ΔG > 0. ENTROPY GATE CLOSED. HALTING ACTION MINIMIZATION.")
-                time.sleep(2)
-            else:
-                print(">>> [STABLE] ΔG < 0. SIMPLY CONNECTED REASONING PERMITTED (∂²=0).")
-                
-            print("-" * 50)
-            time.sleep(2)
-    except KeyboardInterrupt:
-        print("\n[TERMINATE] THERMAL POLL HALTED.")
+def ensure_data_dir(path):
+    d = os.path.dirname(path)
+    if d and not os.path.exists(d):
+        os.makedirs(d, exist_ok=True)
+
+def main():
+    ensure_data_dir(OUT_CSV)
+    # Append header only if file doesn't exist
+    header_needed = not os.path.exists(OUT_CSV)
+    with open(OUT_CSV, "a", newline="") as f:
+        writer = csv.writer(f)
+        if header_needed:
+            writer.writerow(["timestamp_utc", "temp_c", "delta_g_proxy", "state", "event"])
+            f.flush()
+        try:
+            while True:
+                temp_c = poll_soc_temperature()
+                delta_g = calculate_gibbs_proxy(temp_c)
+                event = ""
+                state = "stable"
+                if temp_c >= THERMAL_CEILING_C:
+                    state = "critical"
+                    event = "thermal_ceiling_breach"
+                    gc.collect()
+                    time.sleep(5)
+                elif delta_g > 0:
+                    state = "warning"
+                    event = "delta_g_positive"
+                    time.sleep(2)
+                else:
+                    state = "stable"
+                ts = datetime.now(timezone.utc).isoformat()
+                writer.writerow([ts, f"{temp_c:.2f}", f"{delta_g:.4f}", state, event])
+                f.flush()
+                print(f"{ts} | T={temp_c:.2f}C | ΔG={delta_g:.4f} | {state} {event}")
+                time.sleep(SAMPLE_INTERVAL_S)
+        except KeyboardInterrupt:
+            print("\n[TERMINATE] monitoring halted by user.")
 
 if __name__ == "__main__":
-    veritas_gate_execution()
+    main()
