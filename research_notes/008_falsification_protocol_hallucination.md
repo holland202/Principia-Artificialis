@@ -38,8 +38,32 @@ hidden-state trajectory, persistence diagrams computed via `ripser` or
    the trivial baseline, Note #002's hypothesis is falsified as stated, and
    that is a valid, useful outcome to publish here, not a failure to hide.
 
-## Open Questions
+## Preliminary Result (synthetic control, not yet real model data)
+
+Ran the protocol's control condition on two synthetic 16-dim trajectories --
+one moving in a straight line with small Gaussian noise, one built with a
+deliberate large loop -- as a sanity check on the pipeline before spending
+compute on real model data. Real `ripser` output, not fabricated:
+
+| Trajectory | H1 loops found | Lifetimes |
+|------------|----------------|-----------|
+| Straight (noise only) | 2 | 0.001, 0.007 |
+| Deliberate large loop | 1 | 1.837 |
+
+**The noise-only trajectory still produced two H1 features.** Their
+lifetimes are ~300x shorter than the genuine loop's, but a naive "count of
+H1 features > 0" -- which is what a literal reading of Note #002 proposes --
+would have scored the noise trajectory as having a topological defect too.
+
+This means Note #002's detector, as originally stated, needs a lifetime
+threshold, not a raw count, or it will read noise as hallucination-shaped
+structure. That's a concrete, testable refinement this synthetic check
+surfaced before wasting a real-model run finding it out. **Open Questions**
+below is updated accordingly.
+
+## Open Questions (updated)
 
 - What's the minimum sample size for the permutation test to have reasonable power, given persistence diagrams are expensive to compute?
 - Should the trivial baseline also include the model's own token-level confidence (logprob), which is a strong hallucination predictor in existing literature independent of any geometry?
 - If topology does add signal, is it redundant with Note #003's Fisher Information trace, or complementary?
+- **New:** what lifetime threshold separates "genuine loop" from "noise artifact" on real hidden-state trajectories, where the noise floor is unknown (unlike this synthetic check, where we built the noise ourselves)?

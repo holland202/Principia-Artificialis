@@ -6,6 +6,38 @@
 
 ---
 
+## Epistemic Status (read this before the rest of the document)
+
+Everything below this box is written in confident, declarative prose --
+"Attention computes similarity in the Fisher-Rao metric," "Hallucination is
+the geometric signature of a broken geodesic," and similar. **None of these
+are established results.** Every one of them is a hypothesis carried over
+from a Draft research note that has not yet been tested against a real
+model. This box exists because prose confidence and evidential confidence
+drifted apart somewhere in compiling this volume, and a reader skimming the
+sections below would reasonably come away thinking more of this is settled
+than actually is.
+
+A rule of thumb while reading: if a sentence doesn't cite a specific
+experiment with a specific result, it is a hypothesis, not a finding --
+regardless of how it's phrased. The "Open Problems" section (Sec. 9) and
+"Call to Action" (Sec. 10) are honest about this; the sections in between
+are not yet written in a way that's consistent with that honesty. Bringing
+the whole document's tone in line with Sec. 9/10 is the single highest-value
+edit this volume needs before it's shared outside this repo.
+
+The visualizations referenced in this repo's `simulations/` directory are
+real, correctly-implemented mathematics (verified: the Fisher-Rao metric and
+geodesic optimization in `information_manifold_topology.py` are computed
+correctly) -- but computed on a **toy 2-parameter Gaussian statistical
+manifold**, not on any real model's hidden states. Panel titles like
+"Hallucination Probability Field" describe what the toy model is a metaphor
+*for*, not a measurement *of* real hallucination behavior. Treat the figures
+as "here is what the proposed math looks like on an example simple enough to
+plot," not as evidence about real transformers.
+
+---
+
 ## Abstract
 
 We present a unified mathematical framework for understanding artificial cognition through the lens of information geometry, topology, dynamical systems, and quantum-inspired inference. Drawing on five foundational research notes and two new contributions, we argue that Large Language Models (LLMs) do not merely process tokens -- they traverse high-dimensional statistical manifolds, and the quality of their reasoning is quantifiable through geometric invariants. This volume establishes the theoretical foundations for a new science of artificial thought.

@@ -1,4 +1,4 @@
-# Research Note #007: Memory Dynamics as Gradient Flow on Statistical Manifolds
+# Research Note #010: Memory Dynamics as Gradient Flow on Statistical Manifolds
 
 **Status:** Draft | **Author:** Kimi (Moonshot AI) for Principia Artificialis  
 **Cross-references:** Note #004 (Thermodynamics), Note #005 (Geodesics), Note #006 (Entanglement)

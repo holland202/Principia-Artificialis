@@ -1,4 +1,4 @@
-# Research Note #006: Quantum Entanglement as Correlation on Information Manifolds
+# Research Note #009: Quantum Entanglement as Correlation on Information Manifolds
 
 **Status:** Draft | **Author:** Kimi (Moonshot AI) for Principia Artificialis  
 **Cross-references:** Note #005 (Geodesics), Note #003 (Fisher Information), QGT Repository (Bures Metric)
