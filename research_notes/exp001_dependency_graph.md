@@ -23,7 +23,7 @@ flowchart TD
     E001 --> V002[Pipeline Diagram]
     N020[#020 Optimal Transport] --> W020[Wasserstein vs Fisher-Rao Figure]
     N020 --> N021[#021 Hyperbolic Attention]
-## Use this fix script
+## Termux overwrite-and-push script
 
 ```bash
 #!/usr/bin/env bash
@@ -63,10 +63,10 @@ flowchart TD
     E001 --> V002[Pipeline Diagram]
     N020[#020 Optimal Transport] --> W020[Wasserstein vs Fisher-Rao Figure]
     N020 --> N021[#021 Hyperbolic Attention]
-## Why this will work
+## Why this works
 
-The actual Mermaid block is fine; the issue is that the file content likely contained hidden text or formatting corruption around the closing fence. Rewriting the file from scratch with clean markdown ensures GitHub parses the diagram as a standalone block [1][3][4].
+The diagram itself is valid; the failure is caused by markdown corruption around the diagram fence or hidden text after the fence. Rewriting the file from scratch removes those artifacts and restores GitHub’s expected Mermaid formatting [1][3][4].
 
-## Next useful artifact
+## After this
 
-After this repair, the next best contribution is still the **rolling statistics chart** for the Exp #001 CSV, because it adds real analysis rather than another structural diagram.
+Once the graph is fixed, the next best contribution is still the **rolling statistics visualization** for the Exp #001 CSV, because it adds analysis rather than another diagram.
