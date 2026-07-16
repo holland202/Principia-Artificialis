@@ -79,7 +79,8 @@ This is not an engineering repository. It is a **living mathematical framework**
 ---
 
 ## Visualizations
-
+**4D Thought Tensor Rotation** — Projected hyper-tensor evolution with geodesic flow overlay (new):
+![Thought Tensor 4D](figures/thought_tensor_4d_rotation.gif)
 ### Computed Figures (Available)
 ![Quantum geodesic flow](figures/quantum_geodesic_flow.gif)
 
