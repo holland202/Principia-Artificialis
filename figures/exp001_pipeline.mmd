@@ -1,0 +1,12 @@
+flowchart TD
+    A[Poll SoC Temperature] --> B[Compute Gibbs Proxy]
+    B --> C{T >= 38.5C?}
+    C -->|Yes| D[Critical State]
+    C -->|No| E{ΔG > 0?}
+    E -->|Yes| F[Warning State]
+    E -->|No| G[Stable State]
+    D --> H[gc.collect]
+    F --> I[Log CSV]
+    G --> I[Log CSV]
+    H --> I[Log CSV]
+    I --> J[Render Dashboard PNG]
