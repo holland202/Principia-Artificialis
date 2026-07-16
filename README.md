@@ -166,11 +166,31 @@ graph TD
     C --> L
     L --> Truth
 
+
+# Principia Artificialis
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Discussions: active](https://img.shields.io/badge/Discussions-active-green.svg)](discussions/)
+
+> *Vincit Omnia Veritas*
+
+## Visualizations
+
 ### Restored GIF Visuals (New)
 
-- `figures/quasar_ultimate_final.gif` — Cosmic reasoning animation
-- `figures/quasar_cosmic_ultimate.gif` — Holographic boundary
-- `figures/thought_tensor_4d.gif` — 4D thought tensor rotation
-- `figures/entanglement_breathing.gif` — Entanglement landscape breathing
-- And more (3D certificates, Bloch sphere, etc.)
+![Quasar Ultimate](figures/quasar_ultimate_final.gif)  
+**Cosmic reasoning animation**
 
+![Quasar Cosmic](figures/quasar_cosmic_ultimate.gif)  
+**Holographic boundary**
+
+![Thought Tensor 4D](figures/thought_tensor_4d.gif)  
+**4D thought tensor rotation**
+
+![Entanglement Breathing](figures/entanglement_breathing.gif)  
+**Entanglement landscape breathing**
+
+And more (3D certificates, Bloch sphere, quasar sci-fi, etc.)
+
+### Computed Figures
+(See full list in previous sections)
