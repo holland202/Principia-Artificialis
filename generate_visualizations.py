@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+8#!/usr/bin/env python3
 """
 Generate all 5 planned visualization figures for Principia Artificialis.
 Run: python3 generate_visualizations.py
@@ -357,3 +357,130 @@ plt.close()
 print("  ✓ renormalization_flow.png")
 
 print("\nAll 5 figures generated successfully in figures/")
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm
+import os
+
+os.makedirs("figures", exist_ok=True)
+
+# Synthetic Thought Tensor: L x N x d x K
+L, N, d, K = 24, 64, 32, 6
+np.random.seed(0)
+
+# Structured synthetic data: some layers/tokens/tasks more active
+l_weights = np.linspace(0.5, 1.5, L)
+n_weights = 1 + 0.5 * np.sin(2*np.pi*np.arange(N)/N)
+k_weights = np.array([1.2, 0.8, 1.0, 1.5, 0.7, 1.1])
+
+T = np.random.randn(L, N, d, K)
+for l in range(L):
+    for n in range(N):
+        for k in range(K):
+            T[l,n,:,k] *= l_weights[l] * n_weights[n] * k_weights[k]
+
+# 1. Raw norm slice (L x N)
+norm_LN = np.linalg.norm(T, axis=(2,3))
+
+# 2. Task slices (L x N for each k)
+T_task = [np.linalg.norm(T[:,:,:,k], axis=2) for k in range(K)]
+
+# 3. Layer-wise effective rank
+ranks = []
+for l in range(L):
+    M = T[l].reshape(N, d*K)
+    s = np.linalg.svd(M, compute_uv=False)
+    s = s / (s.sum() + 1e-12)
+    eff_rank = np.exp(-np.sum(s * np.log(s + 1e-12)))
+    ranks.append(eff_rank)
+ranks = np.array(ranks)
+
+# 4. Entanglement-like entropy per layer
+ents = []
+for l in range(L):
+    M = T[l].reshape(N, d*K)
+    s = np.linalg.svd(M, compute_uv=False)
+    s = s / (s.sum() + 1e-12)
+    ent = -np.sum(s * np.log(s + 1e-12))
+    ents.append(ent)
+ents = np.array(ents)
+
+# 5. RG flow of norms (coarse-grain layers)
+def coarse_grain_norms(T, block=2):
+    L = T.shape[0]
+    norms = []
+    for scale in range(0, int(np.log2(L)), 1):
+        b = 2**scale
+        # simple block averaging over layers
+        T_cg = T.copy()
+        # not rigorous, just illustrative
+        norm = np.linalg.norm(T_cg, axis=(1,2,3))
+        norms.append(norm[::b])
+    return norms
+
+rg_norms = coarse_grain_norms(T)
+
+# 6. Task geometry (embed tasks by slice distance)
+task_slices = np.array([T[:,:,:,k].ravel() for k in range(K)])
+# simple distance-based embedding (MDS-like via PCA for demo)
+from sklearn.decomposition import PCA
+pca = PCA(n_components=2)
+task_emb = pca.fit_transform(task_slices)
+
+# Plot
+W, H = 1400, 900
+fig, axes = plt.subplots(2, 3, figsize=(W/100.0, H/100.0), dpi=100)
+fig.patch.set_facecolor("#0b0f14")
+
+# 1. Raw norm
+ax = axes[0,0]
+im = ax.imshow(norm_LN, cmap=cm.viridis, origin="lower")
+ax.set_title("1. Raw tensor norm (L×N)")
+ax.set_xlabel("Layer")
+ax.set_ylabel("Token")
+plt.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+
+# 2. Task slices
+ax = axes[0,1]
+ax.axis("off")
+for k in range(K):
+    im = ax.imshow(T_task[k], cmap=cm.viridis, origin="lower",
+                   extent=[k*1.0, (k+1)*1.0, 0, L])
+ax.set_title("2. Task slices (k=0..5)")
+ax.set_xlim(0, K)
+ax.set_ylim(0, L)
+
+# 3. Effective rank
+ax = axes[0,2]
+ax.plot(np.arange(L), ranks, color="#4fd1c5")
+ax.set_title("3. Layer-wise effective rank")
+ax.set_xlabel("Layer")
+ax.set_ylabel("Effective rank")
+
+# 4. Entanglement entropy
+ax = axes[1,0]
+ax.plot(np.arange(L), ents, color="#f6ad55")
+ax.set_title("4. Entanglement-like entropy")
+ax.set_xlabel("Layer")
+ax.set_ylabel("Entropy")
+
+# 5. RG flow
+ax = axes[1,1]
+for i, n in enumerate(rg_norms):
+    ax.plot(np.arange(len(n)), n, label=f"scale {i}")
+ax.set_title("5. RG flow of norms")
+ax.set_xlabel("Coarse layer index")
+ax.set_ylabel("Norm")
+
+# 6. Task geometry
+ax = axes[1,2]
+ax.scatter(task_emb[:,0], task_emb[:,1], c=np.arange(K), cmap=cm.tab10, s=80)
+for k in range(K):
+    ax.text(task_emb[k,0], task_emb[k,1], f"k{k}", fontsize=9)
+ax.set_title("6. Task geometry from T")
+ax.axis("off")
+
+plt.tight_layout()
+out_path = "figures/note027_thought_tensor_decomp.png"
+plt.savefig(out_path, facecolor="#0b0f14")
+print(f"Saved: {out_path}")
