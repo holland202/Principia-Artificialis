@@ -165,3 +165,12 @@ graph TD
     K -->|Fail| H
     C --> L
     L --> Truth
+
+### Restored GIF Visuals (New)
+
+- `figures/quasar_ultimate_final.gif` — Cosmic reasoning animation
+- `figures/quasar_cosmic_ultimate.gif` — Holographic boundary
+- `figures/thought_tensor_4d.gif` — 4D thought tensor rotation
+- `figures/entanglement_breathing.gif` — Entanglement landscape breathing
+- And more (3D certificates, Bloch sphere, etc.)
+
