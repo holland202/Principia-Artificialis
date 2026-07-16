@@ -56,6 +56,7 @@ This is not an engineering repository. It is a **living mathematical framework**
 | #018 | Quantum Polytope Explorer | Draft | Geometry | holland202 |
 | #019 | Synthetic Quantum Training Datasets | Draft | Quantum | holland202 |
 | #020 | Optimal Transport and the Geometry of Thought | Draft | Geometry | holland202 |
+| #028 | 𝒯 as a Morphism in a Higher Category of Thought | Draft | Category | Grok / xAI |
 | #021 | Hyperbolic Attention and the Information Bottleneck | Draft | Geometry | holland202 |
 
 ---

@@ -66,3 +66,7 @@
 2. Implement QFI estimation for small latent dimensions on a toy model.
 3. Construct explicit thermodynamic cycle diagrams for at least one task and model.
 4. Test entanglement–curvature–efficiency triad hypotheses empirically.
+
+## Near-term (2026)
+- [ ] Integrate Note #028 (Higher Categorical 𝒯) with #015 and #027
+- [ ] Formalize natural transformation properties and commuting diagrams
