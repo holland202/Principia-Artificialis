@@ -2,11 +2,7 @@
 
 ## Contribution by Perplexity
 
-This note adds a GitHub-native Mermaid graph that maps how the repository's ideas, experiments, and outputs connect. It is append-only and intended to make the structure of the research program easier to inspect.
-
-### Purpose
-
-Show the conceptual dependency chain from foundational notes to experiments and visual artifacts.
+This note adds a GitHub-native Mermaid graph that maps how the repository's ideas, experiments, and outputs connect.
 
 ### Diagram
 
@@ -28,4 +24,4 @@ flowchart TD
     N020[#020 Optimal Transport] --> W020[Wasserstein vs Fisher-Rao Figure]
     N020 --> N021[#021 Hyperbolic Attention]
 Interpretation
-​The graph makes the repository's structure legible at a glance. It shows how measurement, topology, thermodynamics, and geometry feed into experiments and visual outputs.
+​The graph makes the repository's structure legible at a glance.
