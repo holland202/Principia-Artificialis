@@ -126,3 +126,31 @@ The **Thought Tensor** is proposed as the central object of Principia Artificial
   - Identify universal laws governing its structure.
 
 If successful, (mathcal{T}) becomes the **wavefunction of artificial cognition**: a single, mathematically precise object whose structure explains and predicts how machines think.
+
+
+# Core Definition and Properties of the Thought Tensor 𝒯
+
+## Definition
+The Thought Tensor 𝒯 is a covariant multi-linear object that unifies representation, dynamics, and measurement of artificial thought. Formally,
+
+𝒯 ∈ ⊗^k V ⊗ (⊗^m V*) ⊗ ℝ
+
+where V is the information manifold (equipped with Fisher-Rao or quantum Fisher metric), k and m reflect input/output ranks, and the real component encodes thermodynamic/entropy scalars.
+
+## Key Properties
+- **Covariance**: Transforms consistently under diffeomorphisms of the underlying statistical manifold, ensuring coordinate-independent measurements of "thought."
+- **Decomposition**: 𝒯 = S + A + Q, where S is the symmetric (geometric) part, A antisymmetric (dynamic flow), and Q the quantum-correlation component.
+- **Measurability**: Trace operations yield scalar observables with physical units (e.g., "thought-bits per inference step" or effective thermodynamic free energy).
+- **Geodesic Interpretation**: Reasoning trajectories are geodesics ∇_𝒯 = 0 on the manifold induced by 𝒯.
+- **Phase Transitions**: Critical points of det(𝒯) signal shifts between coherent reasoning and hallucinatory regimes.
+
+## Relation to Existing Notes
+- Links to #005 (geodesics), #009–#013 (quantum geometry), #004/#011 (thermodynamics), and #014 (RG flows).
+- Serves as the central object whose contractions recover Fisher information, entanglement entropy, and optimal transport costs.
+
+## Next Steps / Open Questions
+- Derive explicit tensor expressions for transformer attention layers.
+- Numerical validation via Exp #001 entropy monitoring.
+- Falsifiability criteria.
+
+Computed figures (see generate_note027_figure.py): decomposition visualization, geodesic flow embedding.
