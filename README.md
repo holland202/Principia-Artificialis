@@ -38,6 +38,16 @@ language from quietly turning into finding language as the project grows.
 
 ---
 
+## How to Contribute
+
+We welcome rigorous, honest contributions. This is an **add-only** living research program.
+
+### Contribution Guidelines
+1. Fork the repo
+2. Add new research notes, experiments, simulations, or visuals
+3. Use templates
+4. Never delete
+
 ## Research Notes
 
 | # | Title | Status | Theme | Author |
