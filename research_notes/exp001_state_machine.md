@@ -1,3 +1,8 @@
+# Exp #001 State Machine
+
+## Diagram
+
+```mermaid
 stateDiagram-v2
     direction LR
     [*] --> Idle
