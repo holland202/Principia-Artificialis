@@ -78,6 +78,8 @@ This is not an engineering repository. It is a **living mathematical framework**
 ---
 
 ## Visualizations
+Thought Tensor Decomposition\tNote #027\t6-panel: raw tensor norm, task slices, effective rank, entanglement entropy, RG flow, task geometry
+Static counterpart: `note027_thought_tensor_decomp.png` — multi-index structure of the Thought Tensor.
 
 ### Computed Figures (Available)
 ![Quantum geodesic flow](figures/quantum_geodesic_flow.gif)
