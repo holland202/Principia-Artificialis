@@ -1,47 +1,68 @@
-# Principia Artificialis — Research Roadmap
+# Research Roadmap — Principia Artificialis
 
-## Phase 1: Foundations (Complete)
-- [x] Note #001: Measurement framework for thought
-- [x] Note #002: Hallucinations as topological defects
-- [x] Note #003: Fisher information and confidence
-- [x] Note #004: Thermodynamics of reasoning
-- [x] Note #005: Geodesics on information manifolds
-- [x] Note #006: Tensor-train compression and effective rank
-- [x] Note #007: Koopman-operator view of reasoning
-- [x] Note #008: Falsification protocol for topological defects
-- [x] Note #009: Quantum entanglement on information manifolds
-- [x] Note #010: Memory dynamics as gradient flow
+## Completed (as of 2026-07-16)
 
-## Phase 2: Synthesis & Extension (In Progress)
-- [x] Note #011: Thermodynamic arrow of reasoning
-- [x] Note #012: Quantum error correction as working memory
-- [x] Note #013: Symplectic geometry of attention
-- [x] Note #014: Renormalization group flows
-- [x] Note #015: Category-theoretic compositionality
-- [x] Note #020: Optimal transport and geometry of thought
-- [ ] Whitepaper Volume I: Foundations of Artificial Thought
-- [ ] Experiment #001: Entropy production monitoring (execution)
-- [ ] Experiment #002: Quantum-geodesic bridge (execution)
+- **Information-geometric foundation**  
+  - Fisher-Rao and Wasserstein geometries — Note #020  
+  - Visualization: `figures/note020_wasserstein_vs_fisherrao.png`
 
-## Phase 3: Quantum-Geometric Integration (Q3 2026)
-- [ ] Note #016: Bures-metric attention and quantum geometric transformers
-- [ ] Note #017: Quantum circuit synthesis via geometric flows
-- [ ] Note #018: Quantum polytope explorer and anyon models
-- [ ] Note #019: Synthetic quantum training datasets
-- [ ] Whitepaper Volume II: The Geometry of Reasoning
+- **Manifold topology**  
+  - 6-panel manifold visualization (geodesics, curvature, defects) — Note #008  
+  - Visualization: `figures/manifold_topology_6panel.png`
 
-## Phase 4: Thermodynamic Cognition (Q4 2026–Q1 2027)
-- [ ] Note #021: Non-equilibrium thermodynamics of inference
-- [ ] Note #022: Entropy production bounds on generalization
-- [ ] Note #023: Phase transitions in model capability
-- [ ] Whitepaper Volume III: The Thermodynamics of Cognition
+- **Thermodynamic engine analogy**  
+  - Thermodynamic cycles and phase boundaries — Notes #006–#008  
+  - Visualizations: `figures/thermodynamic_engine.png`, `figures/sim001_thermo_engine.png`
 
-## Phase 5: Experimental Validation (Ongoing)
-- [ ] RG spectroscopy on real transformers (Protocol 7.1–7.2)
-- [ ] Critical exponent measurement across architectures
-- [ ] AIQ computation for model families
-- [ ] Grokking phase transition detection
+- **Quantum entanglement diagnostics**  
+  - Entanglement entropy, Bell inequalities, circuit complexity, advantage — Note #021  
+  - Visualization: `figures/quantum_frontiers.png`
 
----
+- **Renormalization-group flow**  
+  - RG flow of effective couplings in representation space — Note #021  
+  - Visualization: `figures/renormalization_flow.png`
 
-*Last updated: 2026-07-16*
+- **Research dependency network**  
+  - Graph of dependencies among notes, experiments, and figures — Note #021  
+  - Visualization: `figures/research_dependency_network.png`
+
+- **Pipeline documentation**  
+  - Experiment/figure generation pipeline — `figures/exp001_pipeline.mmd`
+
+## In progress
+
+- **Quantum Fisher Information metric**  
+  - QFI / Bures geometry on representation space — Note #022 (draft)  
+  - Planned figure: `figures/note022_qfi_eigenvalue_spectrum.png`
+
+- **Quantum thermodynamic RG framework**  
+  - Synthesis of thermo, RG, and quantum information — Note #023 (this file’s companion)
+
+## Next figures to generate
+
+1. `figures/note022_qfi_eigenvalue_spectrum.png`  
+   - QFI eigenvalue spectrum vs layer index / RG scale.  
+   - Compare with classical Fisher-Rao eigenvalues.
+
+2. `figures/quantum_thermo_cycle.png`  
+   - P–V–like diagram for the quantum inference engine.  
+   - Annotate strokes: compression, expansion, heat exchange.
+
+3. `figures/rg_flow_with_qfi.png`  
+   - RG trajectories from `renormalization_flow.png` enriched with QFI curvature indicators.  
+   - Highlight fixed points and hypothesized thermodynamic phases.
+
+## Open theoretical questions
+
+- Do RG fixed points coincide with thermodynamic phase transitions in the representation space?
+- Is there a universal relation between entanglement entropy and QFI curvature across architectures?
+- Can we derive an explicit free-energy functional (mathcal{F}) whose gradient flow yields the observed RG dynamics?
+- Are there architecture-specific “Carnot-like” bounds on task performance given entanglement and curvature constraints?
+- How does the Wasserstein–Fisher-Rao–QFI tri-geometry change with training time, data distribution, or task complexity?
+
+## Suggested next steps
+
+1. Finalize Note #022 (QFI metric) and generate `note022_qfi_eigenvalue_spectrum.png`.
+2. Implement QFI estimation for small latent dimensions on a toy model.
+3. Construct explicit thermodynamic cycle diagrams for at least one task and model.
+4. Test entanglement–curvature–efficiency triad hypotheses empirically.
