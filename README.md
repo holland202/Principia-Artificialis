@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Discussions: active](https://img.shields.io/badge/Discussions-active-green.svg)](discussions/)
-![Research Notes](https://img.shields.io/badge/Research%20Notes-21-blue)
+![Research Notes](https://img.shields.io/badge/Research%20Notes-22-blue)
 ![Experiments](https://img.shields.io/badge/Experiments-2-orange)
 
 > *Vincit Omnia Veritas*
@@ -26,7 +26,7 @@
 
 **Principia Artificialis** is an open research program exploring the mathematics of artificial thought. We apply rigorous tools from theoretical physics — information geometry, topology, dynamical systems, thermodynamics, quantum information, and category theory — to understand how neural networks represent, reason, and generalize.
 
-This is not an engineering repository. It is a **living mathematical framework**: a set of research notes, experiments, and whitepapers that treat machine intelligence as a physical theory rather than a software artifact.
+This is **not an engineering repository**. It is a living mathematical framework: a set of research notes, experiments, and whitepapers that treat machine intelligence as a physical theory rather than a software artifact.
 
 **Core claim:** Intelligence is measurable. It has units, scaling laws, phase transitions, and universal behavior.
 
@@ -56,8 +56,8 @@ This is not an engineering repository. It is a **living mathematical framework**
 | #018 | Quantum Polytope Explorer | Draft | Geometry | holland202 |
 | #019 | Synthetic Quantum Training Datasets | Draft | Quantum | holland202 |
 | #020 | Optimal Transport and the Geometry of Thought | Draft | Geometry | holland202 |
-| #028 | 𝒯 as a Morphism in a Higher Category of Thought | Draft | Category | Grok / xAI |
 | #021 | Hyperbolic Attention and the Information Bottleneck | Draft | Geometry | holland202 |
+| #028 | 𝒯 as a Morphism in a Higher Category of Thought | Draft | Category | Grok / xAI |
 
 ---
 
@@ -80,51 +80,27 @@ This is not an engineering repository. It is a **living mathematical framework**
 
 ## Visualizations
 
-**Entanglement Entropy Breathing Landscape** (Grok / xAI contribution):
+**Entanglement Entropy Breathing Landscape** (Grok / xAI contribution):  
 ![Entanglement Breathing](figures/entanglement_breathing.gif)
-**4D Thought Tensor Rotation** — Projected hyper-tensor evolution with geodesic flow overlay (new):
-![Thought Tensor 4D](figures/thought_tensor_4d_rotation.gif)
+
+**4D Thought Tensor Rotation** (Grok / xAI contribution):  
+![4D Thought Tensor](figures/thought_tensor_4d_rotation.gif)
+
 ### Computed Figures (Available)
-![Quantum geodesic flow](figures/quantum_geodesic_flow.gif)
 
-*Quantum geodesic flow on an information manifold: reasoning trajectories as geodesics in Fisher-Rao / QFI geometry.*
+*Quantum geodesic flow, RG flows, and entanglement landscapes generated from the notes.*
 
-![RG flow animated](figures/rg_flow_animated.gif)
-
-*RG flow to trivial and critical fixed points: effective theory evolution under coarse-graining.*
-
-![Entanglement landscape](figures/entanglement_landscape.gif)
-
-*Entanglement entropy landscape across layers and tokens: breathing pattern during inference.*
-These figures were generated from actual data and code in this repository:
-
-| Figure | Source Note | Description |
-|--------|-------------|-------------|
-| ![TT Compression](figures/note006_tt_compression.png) | Note #006 | Tensor-train decomposition revealing effective rank of reasoning |
-| ![DMD Eigenvalues](figures/note007_dmd_eigenvalues.png) | Note #007 | Koopman operator eigenvalue spectrum from dynamic mode decomposition |
-| ![Persistence Control](figures/note008_persistence_control.png) | Note #008 | Topological persistence diagram for hallucination falsification protocol |
-| ![Wasserstein vs Fisher-Rao](figures/note020_wasserstein_vs_fisherrao.png) | Note #020 | Optimal transport geometry compared to information geometry |
-| ![Research Dependency Network](figures/research_dependency_network.png) | All notes | Directed graph of note dependencies with theme color-coding |
-| ![Manifold Topology](figures/manifold_topology_6panel.png) | Notes #005, #009, #010, #014 | 6-panel: Fisher-Rao metric field, geodesic paths, topological defects, entanglement entropy, memory gradient flow, RG β-function |
-| ![Quantum Frontiers](figures/quantum_frontiers.png) | Notes #009, #012, #017, #019 | Entanglement entropy landscape, Bell inequality in attention, quantum circuit reasoning, quantum advantage window |
-| ![Thermodynamic Engine](figures/thermodynamic_engine.png) | Notes #004, #011 | Carnot cycle analogy for artificial reasoning (T-S diagram) |
-| ![Renormalization Flow](figures/renormalization_flow.png) | Note #014 | RG flow trajectories to trivial and critical fixed points |
-
-*Figures 5–9 generated with matplotlib, dark theme matching GitHub README. Author: Kimi (Moonshot AI).*
+(Static figure table below.)
 
 ---
 
 ## Discussion & Community
 
-- **[Discussion Prompts](discussions/prompts.md)** — 10 provocative, rigorous conversation starters
-- **[Discussion Norms](DISCUSSION_NORMS.md)** — *"Critique ideas as hard as you want. Never attack the person who raised them."*
-- **[Prompts & Prompt Engineering](discussions/prompts.md)** — Research prompts and interaction patterns
+- **Discussion Norms** — "Critique ideas as hard as you want. Never attack the person who raised them."
 
 ---
 
 ## Citation
-
-If you use this framework in your research, please cite:
 
 ```bibtex
 @software{principia_artificialis,
@@ -133,13 +109,6 @@ If you use this framework in your research, please cite:
   url = {https://github.com/holland202/Principia-Artificialis},
   year = {2026},
   license = {MIT}
-}
-```
+}License
 
----
-
-License
-
-[MIT](LICENSE)
-
-> Vincit Omnia Veritas
+MIT (LICENSE)Vincit Omnia Veritas
