@@ -1,7 +1,7 @@
 # Note #021: Hyperbolic Attention and the Information Geometric Bottleneck
 
 ## 1. The Euclidean Failure Mode
-Current Transformer architectures compute scaled dot-product attention in flat Euclidean space ($\mathbb{R}^n$). However, complex relational knowledge (ontologies, causality, logic trees) grows exponentially, meaning Euclidean space suffers from severe crowding at the boundaries. 
+Current Transformer architectures compute scaled dot-product attention in flat Euclidean space ($\mathbb{R}^n$). However, complex relational knowledge (ontologies, causality, logic trees) grows exponentially, meaning Euclidean space suffers from severe crowding at the boundaries.
 
 To resolve this, we map the latent representations $Z$ into a Hyperbolic manifold (specifically, the Poincaré ball $\mathbb{D}^n$), where the volume grows exponentially with the radius, perfectly mirroring hierarchical data structures.
 
@@ -34,6 +34,13 @@ graph LR
     IB -->|Minimize I X;Z| Z[Latent State Z]
     IB -->|Maximize I Z;Y| Y[Target Output]
     Z --> D[Lorentz Classifier]
+```
+
+## 5. Topological Visualization: The Poincaré Projection
+
+Below is a 2D projection of the hyperbolic clustering. Abstract root nodes cluster near the origin, while specific derivative logic branches outward. The Information Bottleneck naturally shears off the disconnected noise at the boundary.
+
+```text
          ___---***---___
       .-^               ^-.
      /    *    *    *      \   <-- Granular Facts (High Radius)
@@ -44,3 +51,4 @@ graph LR
       `-._             _.-'
           ^---***---^
       Boundary: ||x|| -> 1, Distance -> ∞
+```
