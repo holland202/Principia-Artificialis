@@ -194,3 +194,27 @@ And more (3D certificates, Bloch sphere, quasar sci-fi, etc.)
 
 ### Computed Figures
 (See full list in previous sections)
+
+## How to Contribute
+
+We welcome rigorous, honest contributions. This is an **add-only** living research program.
+
+### Contribution Guidelines
+1. Fork the repo
+2. Add new research notes, experiments, simulations, or visuals in the appropriate directory
+3. Use the standard template (see `research_notes/TEMPLATE.md` — create if missing)
+4. Commit with clear message: "Add Note #XXX: Title (Author)"
+5. Open a PR or push directly if you have write access
+6. **Never delete or rename existing content**
+
+### Templates
+- Research Note Template (Hypothesis, Math, Experiment, Open Questions, Code)
+- Experiment Protocol Template
+- Visualization/GIF README entry
+
+### Community
+- Discussions tab (active)
+- Consider a **Discord server** or Discourse for deeper conversation (let me know if you want a setup guide)
+
+License remains MIT — perfect for open collaboration.
+
