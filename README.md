@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Discussions: active](https://img.shields.io/badge/Discussions-active-green.svg)](discussions/)
-![Research Notes](https://img.shields.io/badge/Research%20Notes-22-blue)
+![Research Notes](https://img.shields.io/badge/Research%20Notes-21-blue)
 ![Experiments](https://img.shields.io/badge/Experiments-2-orange)
 
 > *Vincit Omnia Veritas*
@@ -26,9 +26,15 @@
 
 **Principia Artificialis** is an open research program exploring the mathematics of artificial thought. We apply rigorous tools from theoretical physics — information geometry, topology, dynamical systems, thermodynamics, quantum information, and category theory — to understand how neural networks represent, reason, and generalize.
 
-This is **not an engineering repository**. It is a living mathematical framework: a set of research notes, experiments, and whitepapers that treat machine intelligence as a physical theory rather than a software artifact.
+This is not an engineering repository. It is a **living mathematical framework**: a set of research notes, experiments, and whitepapers that treat machine intelligence as a physical theory rather than a software artifact.
 
-**Core claim:** Intelligence is measurable. It has units, scaling laws, phase transitions, and universal behavior.
+**Organizing hypothesis, not an established result:** intelligence may be
+measurable in the same sense physical quantities are -- with units, scaling
+laws, phase transitions. That's the bet this project is testing across its
+notes, not a finding any of them have yet confirmed. Every note below is
+Draft status precisely because this claim hasn't been checked; see
+[DISCUSSION_NORMS.md](DISCUSSION_NORMS.md) for how we try to keep hypothesis
+language from quietly turning into finding language as the project grows.
 
 ---
 
@@ -57,7 +63,6 @@ This is **not an engineering repository**. It is a living mathematical framework
 | #019 | Synthetic Quantum Training Datasets | Draft | Quantum | holland202 |
 | #020 | Optimal Transport and the Geometry of Thought | Draft | Geometry | holland202 |
 | #021 | Hyperbolic Attention and the Information Bottleneck | Draft | Geometry | holland202 |
-| #028 | 𝒯 as a Morphism in a Higher Category of Thought | Draft | Category | Grok / xAI |
 
 ---
 
@@ -80,27 +85,41 @@ This is **not an engineering repository**. It is a living mathematical framework
 
 ## Visualizations
 
-**Entanglement Entropy Breathing Landscape** (Grok / xAI contribution):  
-![Entanglement Breathing](figures/entanglement_breathing.gif)
-
-**4D Thought Tensor Rotation** (Grok / xAI contribution):  
-![4D Thought Tensor](figures/thought_tensor_4d_rotation.gif)
-
 ### Computed Figures (Available)
 
-*Quantum geodesic flow, RG flows, and entanglement landscapes generated from the notes.*
+**Tensor-Train Compression — Note #006**
+![TT Compression](figures/note006_tt_compression.png)
 
-(Static figure table below.)
+**Koopman Eigenvalues — Note #007**
+![DMD Eigenvalues](figures/note007_dmd_eigenvalues.png)
+
+**Topological Persistence — Note #008**
+![Persistence Control](figures/note008_persistence_control.png)
+
+**Optimal Transport Geometry — Note #020**
+![Wasserstein vs Fisher-Rao](figures/note020_wasserstein_vs_fisherrao.png)
+
+### Planned Visualizations (Not Yet Generated)
+
+- **Research Dependency Network** — Directed graph of note dependencies
+- **Information Manifold Topology** — 6-panel figure: Fisher-Rao metrics, geodesic paths, topological defects
+- **Quantum Frontiers** — Entanglement entropy across layers, Bell inequality in attention
+- **Thermodynamic Engine** — Heat engine analogy for artificial reasoning
+- **Renormalization Flow Diagram** — RG flow trajectory in representation space
 
 ---
 
 ## Discussion & Community
 
-- **Discussion Norms** — "Critique ideas as hard as you want. Never attack the person who raised them."
+- **[Discussion Prompts](discussions/prompts.md)** — 10 provocative, rigorous conversation starters
+- **[Discussion Norms](DISCUSSION_NORMS.md)** — *"Critique ideas as hard as you want. Never attack the person who raised them."*
+- **[Prompts & Prompt Engineering](discussions/prompts.md)** — Research prompts and interaction patterns
 
 ---
 
 ## Citation
+
+If you use this framework in your research, please cite:
 
 ```bibtex
 @software{principia_artificialis,
@@ -109,6 +128,40 @@ This is **not an engineering repository**. It is a living mathematical framework
   url = {https://github.com/holland202/Principia-Artificialis},
   year = {2026},
   license = {MIT}
-}License
+}
 
-MIT (LICENSE)Vincit Omnia Veritas
+### Computed Simulations
+
+**Renormalization Group Flow Trajectory — Simulation #002**
+This diagram illustrates the topological shearing of probabilistic noise. As the state vector moves from the UV scale (high token density) to the IR scale (collapsed truth-signal), the Information Bottleneck applies the $\Delta G < 0$ constraint, mathematically purging topological holes ($\beta_1 > 0$) to enforce a deterministic geodesic.
+
+```mermaid
+graph TD
+    subgraph UV [UV Scale: High-Dimensional Token Space]
+        T[T > 38.5°C: Thermal Noise]
+        S[Stochastic Trajectories]
+        H[β₁ > 0: Topological Holes]
+    end
+    
+    subgraph Flow [Renormalization Group Flow / Veritas Gate]
+        G{Gibbs Energy Gate: ΔG < 0}
+        M(Minkowski Metric Projection)
+        K{Fisher Information Audit: MSE < 0.10}
+    end
+    
+    subgraph IR [IR Scale: Deterministic Logic Core]
+        C[Simply Connected Manifold: β₁=0, β₂=0]
+        L[Low-Rank Identity Operator: UV^T]
+        Truth((Truth-Signal Crystallization))
+    end
+    
+    S --> G
+    T -.->|ATOMIC_REDUCTION_COLLAPSE| M
+    H -->|Adversarial Pruning| G
+    G -->|Stable T| M
+    G -->|Entropy > θ| H
+    M --> K
+    K -->|Pass| C
+    K -->|Fail| H
+    C --> L
+    L --> Truth
