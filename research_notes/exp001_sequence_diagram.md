@@ -14,9 +14,9 @@ Show the runtime sequence of events when the monitor reads temperature, computes
 sequenceDiagram
     participant Sensor
     participant Monitor
-    participant GibbsGate as Gibbs Gate
+    participant GibbsGate as "Gibbs Gate"
     participant Logger
-    participant GC as Memory Flush
+    participant GC as "Memory Flush"
     participant Dashboard
 
     Sensor->>Monitor: temperature reading
@@ -33,5 +33,3 @@ sequenceDiagram
         Logger->>Dashboard: append row
     end
     Dashboard->>Dashboard: render or summarize
-Interpretation
-The sequence diagram makes the experiment easier to follow by showing the order of operations from sensor input to logging and visualization output.
