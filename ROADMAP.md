@@ -36,7 +36,7 @@
   - Planned figure: `figures/note022_qfi_eigenvalue_spectrum.png`
 
 - **Quantum thermodynamic RG framework**  
-  - Synthesis of thermo, RG, and quantum information — Note #023 (this file’s companion)
+  - Synthesis of thermo, RG, and quantum information — Note #023 (this file's companion)
 
 ## Next figures to generate
 
@@ -57,7 +57,7 @@
 - Do RG fixed points coincide with thermodynamic phase transitions in the representation space?
 - Is there a universal relation between entanglement entropy and QFI curvature across architectures?
 - Can we derive an explicit free-energy functional (mathcal{F}) whose gradient flow yields the observed RG dynamics?
-- Are there architecture-specific “Carnot-like” bounds on task performance given entanglement and curvature constraints?
+- Are there architecture-specific "Carnot-like" bounds on task performance given entanglement and curvature constraints?
 - How does the Wasserstein–Fisher-Rao–QFI tri-geometry change with training time, data distribution, or task complexity?
 
 ## Suggested next steps

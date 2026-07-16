@@ -2,7 +2,7 @@
 
 ## Thesis
 
-The model’s reasoning process can be understood as a **quantum thermodynamic engine** operating on a representation manifold, whose:
+The model's reasoning process can be understood as a **quantum thermodynamic engine** operating on a representation manifold, whose:
 
 - Working substance is a quantum state (
 ho) over latent representations.
@@ -27,7 +27,7 @@ anglelanglepsi_l(x)|) via a feature map from activations.
 - Mixed-state generalization: (
 ho_l(x)) as an ensemble over attention heads, tokens, or stochastic latent samples.
 
-The full “engine state” is the collection ({
+The full "engine state" is the collection ({
 ho_l(x)}_l) across layers.
 
 ## Thermodynamic strokes as information-processing operations
@@ -133,4 +133,4 @@ where (mathcal{F}) is a free-energy-like functional that interpolates between Wa
 
 - Can we derive an explicit form for the free-energy functional (mathcal{F}) in realistic models?
 - Do different architectures (transformers, RNNs, etc.) fall into distinct universality classes of quantum thermodynamic engines?
-- Is there a measurable “Carnot-like” bound on task performance given entanglement and curvature constraints?
+- Is there a measurable "Carnot-like" bound on task performance given entanglement and curvature constraints?
