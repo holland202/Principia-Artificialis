@@ -39,7 +39,7 @@ In a topic region (e.g., “pricing”), we may observe multiple clusters:
 - Cluster B: middle phase (e.g., “value‑based pricing”).
 - Cluster C: later views (e.g., “freemium + enterprise”).
 
-Contradictions appear as **distinct clusters with opposingsemantic polarity** but similar topical coordinates.
+Contradictions appear as **distinct clusters with opposing semantic polarity** but similar topical coordinates.
 
 Define a **conflict cost** in region (R subset mathcal{M}):
 
@@ -118,7 +118,7 @@ Instead of “top 5 notes”, produce:
 
 1. **Structural insight hypothesis:** Users gain more actionable insight from geometric summaries (clusters, conflicts, loops) than from ranked quote lists.
 2. **Resolution hypothesis:** Surfacing unresolved loops increases the rate at which users explicitly resolve or discard old questions.
-3. **Holonomy hypothesis:** High‑holonomy loops correlate with importante belief changes or breakthroughs.
+3. **Holonomy hypothesis:** High‑holonomy loops correlate with important belief changes or breakthroughs.
 4. **Curvature hypothesis:** Periods of high curvature in the memory manifold (rapid reconfiguration of ideas) precede bursts of creative output.
 
 ---
@@ -168,7 +168,7 @@ Instead of “top 5 notes”, produce:
 A simple figure:
 
 - 2D projection of a memory manifold for one user.
-- Colored clusters for “pricing” topic.
+- Colored clusters for one topic (e.g., “pricing”).
 - Arrows showing temporal drift.
 - Highlighted loop with non‑trivial holonomy.
 
