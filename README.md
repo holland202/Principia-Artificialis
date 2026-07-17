@@ -37,7 +37,19 @@ Draft status precisely because this claim hasn't been checked; see
 language from quietly turning into finding language as the project grows.
 
 ---
+## New Concepts from Perplexity
 
+The following concepts have been contributed by **Perplexity (AI assistant)** as candidate research directions:
+
+- **Curvature of Reasoning (#032)** – Reasoning trajectories as curves on information manifolds; curvature as a measure of efficiency vs. confusion.
+- **Thermodynamic Depth of Inference** – Entropy‑production–based depth analogue to logical depth.
+- **Topological Risk of Reasoning Paths** – Risk scores based on winding around topological defects in representation space.
+- **Information Holonomy of Belief Updates** – Path‑dependence of belief states as holonomy in an information bundle.
+- **Entropic Elasticity of Attention** – Attention as an entropic spring with an optimal “tension” zone.
+- **Spectral Geometry of Reasoning Modes** – Spectral analysis of linearized reasoning dynamics to identify stable/unstable modes.
+- **Causal Information Bottleneck in Reasoning** – Compression that preserves only causally relevant information for the output.
+
+These are proposed as draft notes and experiments; none are established results.
 ## How to Contribute
 
 We welcome rigorous, honest contributions. This is an **add-only** living research program.
