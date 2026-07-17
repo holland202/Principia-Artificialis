@@ -106,7 +106,7 @@ em = [curve(snaps[s], 0, n=3000, sizes=(4,), reps=30)[0]
       for s in sorted(snaps)]
 print("emergence I(rel; 4-frag) at steps", sorted(snaps), ":",
       np.round(em, 3))
-np.savez("/home/claude/pa/n39.npz", sizes=sizes, c_rel=c_rel, c_ini=c_ini,
+np.savez("n39.npz", sizes=sizes, c_rel=c_rel, c_ini=c_ini,
          c_noi=c_noi, em=em, steps=sorted(snaps), acc=acc)
 
 # ================= v2: corrected instrument + restated D2 =================
@@ -149,5 +149,5 @@ print(f"D2' noise-bit plateau ratio {plat_noi:.2f} < 0.60 "
       f"(encoded-not-redundant) : {d2p}")
 print(f"D3  emergence (init {c_ini2[3]:.3f} < 50% of trained "
       f"{c_rel2[3]:.3f}) : {d3}")
-np.savez("/home/claude/pa/n39b.npz", sizes=sizes, c_rel=c_rel2,
+np.savez("n39b.npz", sizes=sizes, c_rel=c_rel2,
          c_noi=c_noi2, c_ini=c_ini2, em=em, steps=sorted(snaps))
