@@ -246,3 +246,35 @@ MIT -- see [LICENSE](LICENSE).
 
 ;5;196mVincit Omnia Veritasm
 Project Objective: Uncover the fundamental mathematics of artificial thought.
+
+## Quick Start & Recent Additions
+
+This repo now includes an automated test suite for the **Free Energy of Reasoning (FER)** — a unified variational principle that predicts hallucination using Ricci curvature, entropy production, persistent homology, and random-matrix level spacing. The core claims are:
+
+* Correct reasoning trajectories are local minima of the scalar functional \(\mathcal{F}\).
+* Hallucinated trajectories have higher \(\mathcal{F}\), often preceded by a phase transition in Ricci curvature.
+* The probability of correctness follows a Boltzmann law: \(p(\text{correct}) \propto \exp(-\beta \mathcal{F})\).
+
+To reproduce the synthetic benchmarks (AUC > 0.99):
+
+```bash
+make synthetic
+make real
+ files for recent contributions (April 2026):**
+
+| File | Purpose |
+|------|---------|
+| `research_notes/note041_persistent_homology_of_reasoning_chains.md` | Persistent homology of reasoning chains |
+| `research_notes/note042_ricci_curvature_collapse.md` | Ricci curvature phase transition |
+| `research_notes/note043_free_energy_of_reasoning.md` | Unified Free Energy of Reasoning |
+| `scripts/note041_reference.py` | Synthetic demo for persistence |
+| `scripts/note042_reference.py` | Synthetic demo for Ricci curvature |
+| `scripts/note043_reference.py` | Synthetic demo for FER |
+| `scripts/run_all_notes.py` | Automated runner (synthetic + real) |
+| `Makefile` | Convenience targets (`make synthetic`, `make report`, etc.) |
+| `formal/fer_spec.thy` | Formal specification (Isabelle/Coq style) |
+| `results/expected_synthetic_output.json` | Verified reference numbers |
+| `Exp003/protocol.md` | Full protocol for GPT‑2 small benchmark |
+
+All predictions are falsifiable with publicly available models and datasets. See `WHITEPAPER.md` for a full synthesis.
+
