@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "source": "Principia Artificialis synthetic benchmarks",
+    "date": "2026-04-24",
+    "notes": ["041", "042", "043"],
+    "seed": 42
+  },
+  "synthetic_results": {
+    "041": {
+      "chain": { "mean_components": 19.0, "disconnected_thresholds": 50 },
+      "star": { "mean_components": 2.42, "disconnected_thresholds": 5 },
+      "random": { "mean_components": 10.34, "disconnected_thresholds": 29 }
+    },
+    "042": {
+      "correct_curvature_mean": 0.9901,
+      "correct_curvature_min": 0.9901,
+      "correct_negative": false,
+      "hallucinated_curvature_mean": 0.2952,
+      "hallucinated_curvature_min": -0.8213,
+      "hallucinated_negative": true,
+      "phase_transition_detected": true,
+      "phase_transition_step": 7
+    },
+    "043": {
+      "correct_free_energy": -8.7883,
+      "hallucinated_free_energy": 3.6652,
+      "auc_synthetic": 0.995,
+      "auc_samples": 200
+    }
+  }
+}
