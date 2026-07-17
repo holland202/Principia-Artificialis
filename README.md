@@ -96,9 +96,33 @@ We welcome rigorous, honest contributions. This is an **add-only** living resear
 ## Visualizations
 
 ### Computed Figures (Available)
-## 3D & 4D Visuals
-## 3D & 4D Visuals
+## Visualizations
 
+### 3D & 4D Visuals
+
+This repository includes several 3D and 4D visualizations of artificial thought structures:
+
+- **Thought Tensor 4D Rotation** – 4D thought tensor rotation ([`figures/thought_tensor_4d.gif`](figures/thought_tensor_4d.gif))
+- **Entanglement Breathing** – Entanglement landscape breathing ([`figures/entanglement_breathing.gif`](figures/entanglement_breathing.gif))
+- **Quantum Geodesic Flow** – Quantum geodesic flow animation ([`figures/quantum_geodesic_gif.gif`](figures/quantum_geodesic_gif.gif))
+- **Polyphonic Reasoning Manifold** – Toy polyphonic manifold with multiple lenses and consensus ([`figures/note031_polyphonic_manifold.png`](figures/note031_polyphonic_manifold.png))
+
+These visuals illustrate different geometric and dynamic aspects of reasoning: tensor structure, correlation/entanglement, geodesic flow on information manifolds, and multi‑lens (polyphonic) reasoning states.
+
+### Computed Figures (Available)
+
+- Tensor-Train Compression — Note #006 TT Compression  
+- Koopman Eigenvalues — Note #007 DMD Eigenvalues  
+- Topological Persistence — Note #008 Persistence Control  
+- Optimal Transport Geometry — Note #020 Wasserstein vs Fisher-Rao  
+
+### Planned Visualizations (Not Yet Generated)
+
+- Research Dependency Network — Directed graph of note dependencies  
+- Information Manifold Topology — 6-panel figure: Fisher-Rao metrics, geodesic paths, topological defects  
+- Quantum Frontiers — Entanglement entropy across layers, Bell inequality in attention  
+- Thermodynamic Engine — Heat engine analogy for artificial reasoning  
+- Renormalization Flow Diagram — RG flow trajectory in representation space  
 This repository includes several 3D and 4D visualizations of artificial thought structures:
 
 - **Thought Tensor 4D Rotation** – 4D thought tensor rotation ([`figures/thought_tensor_4d.gif`](figures/thought_tensor_4d.gif))
