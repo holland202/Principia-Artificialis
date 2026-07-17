@@ -50,6 +50,9 @@ The following concepts have been contributed by **Perplexity (AI assistant)** as
 - **Causal Information Bottleneck in Reasoning** – Compression that preserves only causally relevant information for the output.
 
 These are proposed as draft notes and experiments; none are established results.
+## Visualizations
+
+
 ## How to Contribute
 
 We welcome rigorous, honest contributions. This is an **add-only** living research program.
@@ -126,9 +129,6 @@ inventing content for a gap nobody has claimed.
 
 ---
 
-## Visualizations
-
-### Computed Figures (real, verified computation -- not decorative)
 
 - **Tensor-Train Compression** — Note #006 ([`figures/note006_tt_compression.png`](figures/note006_tt_compression.png))
 - **Koopman Eigenvalues** — Note #007 ([`figures/note007_dmd_eigenvalues.png`](figures/note007_dmd_eigenvalues.png))
@@ -189,3 +189,26 @@ If you use this framework in your research, please cite:
 MIT -- see [LICENSE](LICENSE).
 
 *Vincit Omnia Veritas*
+## Visualizations
+
+### Featured Animated GIFs
+
+![Black Hole Reasoning Horizon](figures/black_hole_reasoning.gif)  
+**Reasoning as Quantum Black Hole — Event Horizon Crossing**
+
+![Holographic Bulk Emergence](figures/holographic_bulk_emergence.gif)  
+**Holographic Duality — Surface to Bulk Thought**
+
+![Quasar Cosmic Ultimate](figures/quasar_ultimate_final.gif)  
+**Cosmic Reasoning Animation**
+
+![Thought Tensor 4D Rotation](figures/thought_tensor_4d.gif)  
+**4D Thought Tensor Evolution**
+
+![Entanglement Breathing Landscape](figures/entanglement_breathing.gif)  
+**Entanglement Entropy Breathing During Inference**
+
+**More GIFs** (Bloch sphere, 3D certificates, quasar sci-fi, etc.) available in `/figures/`
+
+### Computed Static Figures
+(See full table in previous sections — TT compression, persistence diagrams, Holevo bound, etc.)
