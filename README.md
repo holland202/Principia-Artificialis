@@ -212,21 +212,7 @@ MIT -- see [LICENSE](LICENSE).
 
 ### Computed Static Figures
 (See full table in previous sections — TT compression, persistence diagrams, Holevo bound, etc.)
-## Principia Artificialis — Project Stats (neofetch style)
 
-```ansi
-;5;196m  ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗ ██╗██████╗ ██╗ █████╗     █████╗ ██████╗ ████████╗██╗███████╗██╗ ██████╗██╗ █████╗ ██╗     ██╗███████╗m
-;5;202m  ██╔══██╗██╔══██╗██║████╗  ██║██╔════╝ ██║██╔══██╗██║██╔══██╗   ██╔══██╗██╔══██╗╚══██╔══╝██║██╔════╝██║██╔════╝██║██╔══██╗██║     ██║██╔════╝m
-;5;208m  ██████╔╝██████╔╝██║██╔██╗ ██║██║  ███╗██║██████╔╝██║███████║   ███████║██████╔╝   ██║   ██║█████╗  ██║██║     ██║███████║██║     ██║███████╗m
-;5;214m  ██╔═══╝ ██╔══██╗██║██║╚██╗██║██║   ██║██║██╔══██╗██║██╔══██║   ██╔══██║██╔══██╗   ██║   ██║██╔══╝  ██║██║     ██║██╔══██║██║     ██║╚════██║m
-;5;220m  ██║     ██║  ██║██║██║ ╚████║╚██████╔╝██║██║  ██║██║██║  ██║   ██║  ██║██║  ██║   ██║   ██║███████╗██║╚██████╗██║██║  ██║███████╗██║███████║m
-;5;226m  ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝╚══════╝╚═╝ ╚═════╝╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚══════╝m
-
-                    ;5;196mP R I N C I P I A   A R T I F I C I A L I Sm
-                          ;5;208mOpen Mathematical Theory of Thought — 2026m
-
-;5;51mOSm: Mathematics of Artificial Intelligence
-;5;51mUptimem: Since July 2026
 ;5;51mKernelm: Information Geometry v0.37
 ;5;51mPackagesm: 37+ Research Notes • Rich Visuals • Exotic GIFs
 ;5;51mShellm: Rigorous Speculation
