@@ -81,7 +81,7 @@ for alpha in alphas:
     F_vals.append(F)
 
 # ----------------------------
-# Save CSV
+# Save CSV (fixed: single-line header)
 # ----------------------------
 csv_path = "data/note035_entropic_elasticity.csv"
 with open(csv_path, "w") as f:

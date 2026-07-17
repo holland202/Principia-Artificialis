@@ -127,4 +127,4 @@ A simple figure:
   - Free energy (F(alpha))
 - Highlight a “Goldilocks band” of intermediate (F).
 
-This can be implemented as `figures/note035_entropic_elasticity.png` in a follow‑up commit.
+Implemented as `figures/note035_entropic_elasticity.png` with data in `data/note035_entropic_elasticity.csv`.
