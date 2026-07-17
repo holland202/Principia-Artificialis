@@ -137,20 +137,6 @@ These visuals illustrate different geometric and dynamic aspects of reasoning: t
 - Renormalization Flow Diagram — RG flow trajectory in representation space  
 This repository includes several 3D and 4D visualizations of artificial thought structures:
 
-- **Thought Tensor 4D Rotation** – 4D thought tensor rotation ([`figures/thought_tensor_4d.gif`](figures/thought_tensor_4d.gif))
-- **Entanglement Breathing** – Entanglement landscape breathing ([`figures/entanglement_breathing.gif`](figures/entanglement_breathing.gif))
-- **Quantum Geodesic Flow** – Quantum geodesic flow animation ([`figures/quantum_geodesic_gif.gif`](figures/quantum_geodesic_gif.gif))
-- **Polyphonic Reasoning Manifold** – Toy polyphonic manifold with multiple lenses and consensus ([`figures/note031_polyphonic_manifold.png`](figures/note031_polyphonic_manifold.png))
-
-These visuals illustrate different geometric and dynamic aspects of reasoning: tensor structure, correlation/entanglement, geodesic flow on information manifolds, and multi‑lens (polyphonic) reasoning states.
-This repository includes several 3D and 4D visualizations of artificial thought structures:
-
-- **Thought Tensor 4D Rotation** – 4D thought tensor rotation ([`figures/thought_tensor_4d.gif`](figures/thought_tensor_4d.gif))
-- **Entanglement Breathing** – Entanglement landscape breathing ([`figures/entanglement_breathing.gif`](figures/entanglement_breathing.gif))
-- **Quantum Geodesic Flow** – Quantum geodesic flow animation ([`figures/quantum_geodesic_gif.gif`](figures/quantum_geodesic_gif.gif))
-- **Polyphonic Reasoning Manifold** – Toy polyphonic manifold with multiple lenses and consensus ([`figures/note031_polyphonic_manifold.png`](figures/note031_polyphonic_manifold.png))
-
-These visuals illustrate different geometric and dynamic aspects of reasoning: tensor structure, correlation/entanglement, geodesic flow on information manifolds, and multi‑lens (polyphonic) reasoning states.
 **Tensor-Train Compression — Note #006**
 ![TT Compression](figures/note006_tt_compression.png)
 
