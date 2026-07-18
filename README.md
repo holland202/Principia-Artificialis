@@ -3,85 +3,81 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Discussions](https://img.shields.io/badge/Discussions-Active-brightgreen.svg)](https://github.com/holland202/Principia-Artificialis/discussions)
 
-**An open, living mathematical research program on the theory of artificial thought.**
-
-## Table of Contents
-- [Overview](#overview)
-- [Directory Structure](#directory-structure)
-- [Research Notes](#research-notes)
-- [Experiments](#experiments)
-- [Visualizations](#visualizations)
-- [How to Contribute](#how-to-contribute)
-- [Community & Citation](#community--citation)
+**An open research program dedicated to the mathematical foundations of artificial intelligence.**
 
 ## Overview
 
-Principia Artificialis explores the mathematics of artificial intelligence using tools from information geometry, topology, dynamical systems, thermodynamics, quantum information, and category theory.
+Principia Artificialis is a collaborative, living framework that investigates artificial intelligence as a fundamental physical and mathematical phenomenon. We apply rigorous methods from information geometry, topology, dynamical systems, thermodynamics, quantum information, and category theory to develop a deeper understanding of representation, reasoning, and generalization in neural systems.
 
-This is **not an engineering repository**. It is a collaborative scientific project — research notes, experiments, simulations, and visualizations that treat intelligence as a physical theory.
+This repository is **not focused on engineering or model development**. It serves as a scientific research program — featuring research notes, experimental protocols, simulations, and visualizations.
 
-**Philosophy**: All content is explicitly labeled Draft or Speculative. Contributions are add-only.
+**Guiding Principles**:
+- All content is explicitly labeled as Draft or Speculative
+- Contributions follow an add-only policy
+- Emphasis on intellectual honesty and falsifiability
 
 ## Directory Structure
 Principia Artificialis/
-├── research_notes/          # Core research notes (#001–#042+)
-├── experiments/             # Experiment protocols
-├── simulations/             # Simulation code
-├── figures/                 # Visualizations and GIFs
-├── scripts/                 # Figure/GIF generators
-├── whitepapers/             # In-progress volumes
-├── discussions/             # Community prompts
+├── research_notes/     # Core theoretical notes (#001–#042+)
+├── experiments/        # Experimental protocols and results
+├── simulations/        # Simulation code and data
+├── figures/            # Visualizations and animated GIFs
+├── scripts/            # Figure and GIF generation tools
+├── whitepapers/        # In-progress synthesis volumes
+├── discussions/        # Community prompts and norms
 ├── README.md
 ├── ROADMAP.md
 ├── CONTRIBUTING.md
 ├── DISCUSSION_NORMS.md
-└── TEMPLATE.md              # Research
+└── TEMPLATE.md         # Standard research note template
 ## Research Notes
 
-**Current count**: 42+ notes
+**Current scope**: Over 42 notes spanning foundational and frontier topics.
 
-**Highlights**:
-- Foundational topics (measurement, geometry, thermodynamics)
-- Quantum-inspired ideas (Holevo bound, entanglement, synthetic datasets)
+**Key Areas**:
+- Measurement and representation (Fisher Information, effective rank, Holevo bound)
+- Geometry of reasoning (geodesics, symplectic attention, optimal transport)
+- Thermodynamics of cognition (entropy production, thermodynamic arrow)
+- Quantum-inspired frameworks (entanglement, error correction, synthetic datasets)
 - Exotic frontier concepts (emergent gravity, holographic duality, quantum black holes, chrono-geometric reasoning, fractal symphonies of thought)
 
-Full list available in the repository.
+Full indexed list available in the repository.
 
 ## Experiments
 
-- Exp #001: Entropy Production Monitoring
-- Exp #002: Quantum-Geodesic Bridge
-- More in progress
+- **Exp #001**: Entropy Production Monitoring Protocol
+- **Exp #002**: Quantum-Geodesic Bridge
+- Additional experiments in active development
 
 ## Visualizations
 
-**Featured GIFs**:
+**Featured Animations**:
 - Black Hole Reasoning Horizon
 - Holographic Bulk Emergence
 - Thought Tensor 4D Rotation
 - Entanglement Breathing Landscape
-- Quasar Cosmic Animations
+- Quasar Cosmic Series
 
-**Computed Figures**: TT compression, persistence diagrams, Holevo bound, etc.
+**Computed Figures** include tensor-train compression, persistence diagrams, Holevo bound analysis, and others generated from verified code.
 
 ## How to Contribute
 
-We welcome rigorous contributions under an **add-only** policy.
+We welcome high-quality contributions that align with the project's scientific standards.
 
 **Guidelines**:
-1. Fork the repo
-2. Add new content in the appropriate directory
-3. Use `research_notes/TEMPLATE.md`
-4. Never delete or rename existing files
-5. Commit clearly and open a PR
+1. Fork the repository
+2. Add new content using the provided template
+3. Follow the add-only policy (no deletions or renames of existing material)
+4. Submit clear, well-documented pull requests
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Detailed instructions are available in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Community & Citation
 
-- Active [Discussions](https://github.com/holland202/Principia-Artificialis/discussions)
-- MIT License
-- Suggested citation in repository
+- Active discussions and community norms
+- MIT License for broad reusability
+
+**Suggested Citation** (BibTeX available in repository)
 
 **Vincit Omnia Veritas**
 
