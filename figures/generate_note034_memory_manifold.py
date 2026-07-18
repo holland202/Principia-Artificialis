@@ -101,11 +101,9 @@ ids = list(range(len(points)))
 # ----------------------------
 csv_path = "data/note034_memory_manifold.csv"
 with open(csv_path, "w") as f:
-    f.write("id,x,y,cluster,time
-")
+    f.write("id,x,y,cluster,time\n")
     for i, (x, y, lab, t) in enumerate(zip(points[:,0], points[:,1], labels, times)):
-        f.write(f"{i},{x:.6f},{y:.6f},{lab},{t:.3f}
-")
+        f.write(f"{i},{x:.6f},{y:.6f},{lab},{t:.3f}\n")
 
 print(f"CSV saved: {csv_path}")
 
@@ -129,8 +127,7 @@ ax.plot(loop[:, 0], loop[:, 1], color="#d62728", linewidth=1.5, alpha=0.5)
 # Axes
 ax.set_xlabel("Semantic dimension 1")
 ax.set_ylabel("Semantic dimension 2")
-ax.set_title("Toy Memory Manifold (Note #034)
-Clusters + Temporal Drift + Holonomy Loop")
+ax.set_title("Toy Memory Manifold (Note #034)\nClusters + Temporal Drift + Holonomy Loop")
 ax.legend(loc="upper left", fontsize=8)
 ax.set_aspect("equal", "box")
 

@@ -1,3 +1,5 @@
+> **SUPERSEDED** by volume1_foundations_of_artificial_thought.md — kept per add-only norm.
+
 # Whitepaper Draft: Volume I -- Foundations of Artificial Thought
 
 **Principia Artificialis**  

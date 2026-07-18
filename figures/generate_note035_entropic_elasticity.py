@@ -85,11 +85,9 @@ for alpha in alphas:
 # ----------------------------
 csv_path = "data/note035_entropic_elasticity.csv"
 with open(csv_path, "w") as f:
-    f.write("alpha,entropy,kl_div,free_energy
-")
+    f.write("alpha,entropy,kl_div,free_energy\n")
     for alpha, S, DKL, F in zip(alphas, S_vals, DKL_vals, F_vals):
-        f.write(f"{alpha:.6f},{S:.6f},{DKL:.6f},{F:.6f}
-")
+        f.write(f"{alpha:.6f},{S:.6f},{DKL:.6f},{F:.6f}\n")
 
 print(f"CSV saved: {csv_path}")
 
@@ -112,8 +110,7 @@ ax.axhspan(band_low, band_high, color="gray", alpha=0.2, label="Goldilocks band 
 
 ax.set_xlabel("Focus parameter α")
 ax.set_ylabel("Value")
-ax.set_title("Entropic Elasticity of Attention (toy model)
-Entropy, KL, and Free Energy vs Focus")
+ax.set_title("Entropic Elasticity of Attention (toy model)\nEntropy, KL, and Free Energy vs Focus")
 ax.legend(loc="upper right", fontsize=8)
 
 plt.tight_layout()
