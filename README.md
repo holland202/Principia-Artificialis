@@ -1,23 +1,3 @@
-<!-- paste at the very top of README.md, above the title -->
-![Principia Artificialis](figures/principia_hero.png)
-
-![repo fetch](figures/principia_fetch.svg)
-
-## Computed figures (nothing decorative)
-| Figure | From | What it shows |
-|---|---|---|
-| `figures/principia_hero.png` | `figures/make_logo.py` | The logo is the exact 600-cell — 120 unit quaternions of 2I, 720 edges of length 1/φ, computed then projected |
-| `figures/note038_dissociation.png` | Note #038 | Constraint violated 100% of the time, worth 5,472× less — the invoice is paid in variance |
-| `figures/note039_darwinism.png` | Note #039 | The classical plateau in a neural net: objectivity = redundancy, and training creates it |
-
-## Contribute in five minutes — human or AI
-1. Copy `NOTE_TEMPLATE.md` → `research_notes/note0XX_your_title.md`.
-2. State a claim that could be *precisely wrong*. Label your epistemic
-   status honestly. Register predictions before running anything.
-3. Code goes in `scripts/`, figures in `figures/`. Refuted claims stay in.
-4. PR. AIs: credit your model by name — your notes sit beside human ones
-   as equals here, judged only on whether the numbers hold.
-
 # Principia Artificialis
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -70,9 +50,6 @@ The following concepts have been contributed by **Perplexity (AI assistant)** as
 - **Causal Information Bottleneck in Reasoning** – Compression that preserves only causally relevant information for the output.
 
 These are proposed as draft notes and experiments; none are established results.
-## Visualizations
-
-
 ## How to Contribute
 
 We welcome rigorous, honest contributions. This is an **add-only** living research program.
@@ -149,6 +126,9 @@ inventing content for a gap nobody has claimed.
 
 ---
 
+## Visualizations
+
+### Computed Figures (real, verified computation -- not decorative)
 
 - **Tensor-Train Compression** — Note #006 ([`figures/note006_tt_compression.png`](figures/note006_tt_compression.png))
 - **Koopman Eigenvalues** — Note #007 ([`figures/note007_dmd_eigenvalues.png`](figures/note007_dmd_eigenvalues.png))
@@ -209,72 +189,3 @@ If you use this framework in your research, please cite:
 MIT -- see [LICENSE](LICENSE).
 
 *Vincit Omnia Veritas*
-## Visualizations
-
-### Featured Animated GIFs
-
-![Black Hole Reasoning Horizon](figures/black_hole_reasoning.gif)  
-**Reasoning as Quantum Black Hole — Event Horizon Crossing**
-
-![Holographic Bulk Emergence](figures/holographic_bulk_emergence.gif)  
-**Holographic Duality — Surface to Bulk Thought**
-
-![Quasar Cosmic Ultimate](figures/quasar_ultimate_final.gif)  
-**Cosmic Reasoning Animation**
-
-![Thought Tensor 4D Rotation](figures/thought_tensor_4d.gif)  
-**4D Thought Tensor Evolution**
-
-![Entanglement Breathing Landscape](figures/entanglement_breathing.gif)  
-**Entanglement Entropy Breathing During Inference**
-
-**More GIFs** (Bloch sphere, 3D certificates, quasar sci-fi, etc.) available in `/figures/`
-
-### Computed Static Figures
-(See full table in previous sections — TT compression, persistence diagrams, Holevo bound, etc.)
-
-;5;51mKernelm: Information Geometry v0.37
-;5;51mPackagesm: 37+ Research Notes • Rich Visuals • Exotic GIFs
-;5;51mShellm: Rigorous Speculation
-;5;51mDEm: Dark Academia
-;5;51mWMm: Add-Only Collaboration
-;5;51mCPUm: Grok / Kimi / Perplexity Hybrid Core
-;5;51mMemorym: Expanding Frontier Ideas Daily
-
-;5;46mLanguagesm: Mathematics • Python • Markdown • LaTeX
-;5;46mHobbiesm: Emergent Gravity • Holographic Duality • Quantum Black Holes • Phase Transitions
-
-;5;196mVincit Omnia Veritasm
-Project Objective: Uncover the fundamental mathematics of artificial thought.
-
-## Quick Start & Recent Additions
-
-This repo now includes an automated test suite for the **Free Energy of Reasoning (FER)** — a unified variational principle that predicts hallucination using Ricci curvature, entropy production, persistent homology, and random-matrix level spacing. The core claims are:
-
-* Correct reasoning trajectories are local minima of the scalar functional \(\mathcal{F}\).
-* Hallucinated trajectories have higher \(\mathcal{F}\), often preceded by a phase transition in Ricci curvature.
-* The probability of correctness follows a Boltzmann law: \(p(\text{correct}) \propto \exp(-\beta \mathcal{F})\).
-
-To reproduce the synthetic benchmarks (AUC > 0.99):
-
-```bash
-make synthetic
-make real
- files for recent contributions (April 2026):**
-
-| File | Purpose |
-|------|---------|
-| `research_notes/note041_persistent_homology_of_reasoning_chains.md` | Persistent homology of reasoning chains |
-| `research_notes/note042_ricci_curvature_collapse.md` | Ricci curvature phase transition |
-| `research_notes/note043_free_energy_of_reasoning.md` | Unified Free Energy of Reasoning |
-| `scripts/note041_reference.py` | Synthetic demo for persistence |
-| `scripts/note042_reference.py` | Synthetic demo for Ricci curvature |
-| `scripts/note043_reference.py` | Synthetic demo for FER |
-| `scripts/run_all_notes.py` | Automated runner (synthetic + real) |
-| `Makefile` | Convenience targets (`make synthetic`, `make report`, etc.) |
-| `formal/fer_spec.thy` | Formal specification (Isabelle/Coq style) |
-| `results/expected_synthetic_output.json` | Verified reference numbers |
-| `Exp003/protocol.md` | Full protocol for GPT‑2 small benchmark |
-
-All predictions are falsifiable with publicly available models and datasets. See `WHITEPAPER.md` for a full synthesis.
-

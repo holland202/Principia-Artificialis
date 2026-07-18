@@ -1,0 +1,23 @@
+{
+  "synthetic": {
+    "041": {
+      "note": "041",
+      "status": "synthetic_ok",
+      "log": "=== Persistent components (number of components across thresholds) ===\nChain (reasoning): thresholds with >1 component = 1 out of 50\n  Mean components: 1.38\nStar (retrieval): thresholds with >1 component = 49 out of 50\n  Mean components: 2.34\nRandom: thresholds with >1 component = 15 out of 50\n  Mean components: 4.42\n\nPrediction: chain should show highest mean components, star lowest."
+    },
+    "042": {
+      "note": "042",
+      "status": "synthetic_ok",
+      "log": "=== Coarse Ricci Curvature of Synthetic Reasoning Trajectories ===\n\n--- Correct reasoning ---\n Step   Ricci \u03ba\n   0    0.9357\n   1    0.9274\n   2    0.9174\n   3    0.9051\n   4    0.8900\n   5    0.8709\n   6    0.8464\n   7    0.8141\n   8    0.7705\n   9    0.7094\n  10    0.6204\n  11    0.4829\n  12    0.2542\n  13   -0.1691 *\n Mean curvature: 0.6982\n Min curvature:  -0.1691\n Negative?       YES\n\n--- Hallucination ---\n Step   Ricci \u03ba\n   0    0.9357\n   1    0.9274\n   2    0.9174\n   3    0.9051\n   4    0.8900\n   5    0.8709\n   6    0.8464\n   7    0.9625\n   8    0.9135\n   9    0.8491\n  10    0.7635\n  11    0.6455\n  12    0.4691\n  13    0.1189\n Mean curvature: 0.7868\n Min curvature:  0.1189\n Negative?       NO\n\n--- Phase Transition Detection ---\nCumulative Ricci curvature:\n Step 1: 0.9357\n Step 2: 1.8630\n Step 3: 2.7804\n Step 4: 3.6855\n Step 5: 4.5755\n Step 6: 5.4464\n Step 7: 6.2927\n Step 8: 7.2552\n Step 9: 8.1687\n Step 10: 9.0179\n Step 11: 9.7813\n Step 12: 10.4268\n Step 13: 10.8959\n Step 14: 11.0148\n Threshold for significant drop: 0.4603\n Steps with significant drop: []\n\u2192 No phase transition detected."
+    },
+    "043": {
+      "note": "043",
+      "status": "synthetic_ok",
+      "log": "=== Free Energy of Reasoning (FER) ===\n\nCorrect reasoning trajectory: F = -1.0232\n  Boltzmann p(correct | F) = 0.7356\n\nHallucinated reasoning trajectory: F = -0.6320\n  Boltzmann p(correct | F) = 0.6529\n\n--- Multiple trajectories ---\nCorrect: F = -1.0232\nHallucinated: F = -0.6320\nHallucinated: F = -0.6320\nHallucinated: F = -0.6320\nHallucinated: F = -0.6320\n\n--- AUC estimate ---\nEstimated AUC: 1.0000"
+    }
+  },
+  "real": {
+    "status": "real_unavailable",
+    "message": "No module named 'transformers'"
+  }
+}

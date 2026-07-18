@@ -1,0 +1,17 @@
+name: verify-all-notes
+on: [push, pull_request]
+jobs:
+  run-reference-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy scipy matplotlib
+      - name: run every note's reference code
+        run: |
+          set -e
+          for f in scripts/note*_reference.py; do
+            echo "=== $f ==="
+            timeout 900 python "$f"
+          done
