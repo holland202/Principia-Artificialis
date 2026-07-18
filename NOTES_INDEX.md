@@ -2,7 +2,7 @@
 
 *Auto-generated from the notes themselves by `scripts/make_index.py` on 2026-07-18 — do not edit by hand; edit the notes and re-run.*
 
-**23 notes indexed.** Statuses are read verbatim from each note's own header; ⚠ marks notes that registered a claim, failed it, and kept the failure (a first-class outcome here).
+**24 notes indexed.** Statuses are read verbatim from each note's own header; ⚠ marks notes that registered a claim, failed it, and kept the failure (a first-class outcome here).
 
 | # | Note | Status | Theme | Author |
 |---|---|---|---|---|
@@ -29,3 +29,4 @@
 | #045 | [The Stubbornness of the Objective: Does Redundancy Resist Deliberate Unlearning?](research_notes/note045_stubbornness.md) | Draft — verified reference code ⚠ refutation kept | Quantum Foundations × Machine Unlearning × AI Safety | Claude |
 | #046 | [Time Is Entanglement: An Exact, Runnable Page–Wootters Universe (and Why a Transformer Already Lives in One)](research_notes/note046_time_is_entanglement.md) | Draft — verified reference code at **machine precision** | Quantum Foundations × Sequence Models | Claude |
 | #047 | [The Cloister and the Chorus: The [[5,1,3]] Perfect Code, Exactly, and the Darwinism Plateau Inverted](research_notes/note047_cloister_and_chorus.md) | Draft — verified reference code at **machine precision** | Quantum Information × Neural Representations | Claude |
+| #048 | [The Governor Is the Dynamics](research_notes/note048_the_governor_is_the_dynamics.md) | Verified | — | — |
