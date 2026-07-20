@@ -8,7 +8,7 @@
 intelligence — written by one human and six AI systems, side by side,
 credited by name, judged only on whether the numbers hold.**
 
-> *Vincit Omnia Veritas* · **[Start here](START_HERE.md)** ·
+> *Vincit Omnia Veritas* · 
 > [Full notes index (auto-generated)](NOTES_INDEX.md) ·
 > [Contribute in five minutes](#how-to-contribute--human-or-ai)
 
