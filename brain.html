@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Second Brain — holland202</title>
+<style>
+  :root{--void:#05070C;--panel:#0C1119;--rule:#1A2431;--text:#D6E2F0;--hot:#FFB454;--dim:#7288A3;}
+  body{margin:0;font-family:ui-monospace;background:var(--void);color:var(--text);height:100vh;overflow:hidden;}
+  header{background:var(--panel);padding:15px 20px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;}
+  h1{font-family:Georgia,serif;margin:0;color:var(--hot);}
+  nav a{margin:0 12px;color:var(--dim);text-decoration:none;}
+  nav a.active{color:var(--hot);}
+  .content{padding:20px;height:calc(100vh - 60px);overflow:auto;}
+  .tab{display:none;}
+  .tab.active{display:block;}
+  .repo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+  .repo-card{background:var(--panel);border:1px solid var(--rule);padding:16px;border-radius:8px;}
+  .repo-card h3{margin:0 0 8px;color:var(--hot);}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Second Brain — holland202</h1>
+  <nav>
+    <a href="#" onclick="showTab(0)" class="active">File Graph</a>
+    <a href="#" onclick="showTab(1)">Repos</a>
+    <a href="#" onclick="showTab(2)">Notes</a>
+  </nav>
+</header>
+
+<div class="content">
+  <!-- Tab 0: Full Interactive Graph -->
+  <div id="tab0" class="tab active">
+    <iframe src="https://holland202.github.io/Principia-Artificialis/index.html" style="width:100%;height:calc(100vh - 120px);border:none;"></iframe>
+  </div>
+
+  <!-- Tab 1: All Repos -->
+  <div id="tab1" class="tab">
+    <h2 style="color:var(--hot)">All Repositories</h2>
+    <div class="repo-grid">
+      <div class="repo-card"><h3>Principia Artificialis</h3><p>Core research + living file graph</p><a href="https://github.com/holland202/Principia-Artificialis" target="_blank">→ GitHub</a></div>
+      <div class="repo-card"><h3>qsleuth</h3><p>Quantum search & exploration</p><a href="https://github.com/holland202/qsleuth" target="_blank">→ GitHub</a></div>
+      <div class="repo-card"><h3>polytope-explorer</h3><p>Quantum polytopes visualization</p><a href="https://github.com/holland202/polytope-explorer" target="_blank">→ GitHub</a></div>
+      <div class="repo-card"><h3>qolas-synthesis</h3><p>Quantum circuit synthesis</p><a href="https://github.com/holland202/qolas-synthesis" target="_blank">→ GitHub</a></div>
+      <div class="repo-card"><h3>quasar</h3><p>Cosmic-scale simulation engine</p><a href="https://github.com/holland202/quasar" target="_blank">→ GitHub</a></div>
+      <div class="repo-card"><h3>sovereign-core</h3><p>Governor & LLM decision engine</p><a href="https://github.com/holland202/sovereign-core" target="_blank">→ GitHub</a></div>
+    </div>
+  </div>
+
+  <!-- Tab 2: Obsidian-style Notes -->
+  <div id="tab2" class="tab">
+    <h2 style="color:var(--hot)">Second Brain Notes</h2>
+    <p>Open your local Obsidian vault and link to this page for a full connected brain.</p>
+    <p><strong>Recommended:</strong> Create a note called <code>🧠 Second Brain Home.md</code> with an iframe pointing here.</p>
+  </div>
+</div>
+
+<script>
+function showTab(n){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab'+n).classList.add('active');
+  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+  document.querySelectorAll('nav a')[n].classList.add('active');
+}
+</script>
+</body>
+</html>
