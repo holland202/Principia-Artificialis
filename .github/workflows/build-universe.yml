@@ -1,0 +1,127 @@
+name: Build Universe Graph
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build universe graph
+        run: |
+          python3 << 'EOF'
+          import json, os
+          from pathlib import Path
+
+          # Lightweight multi-repo skeleton with GitHub links
+          REPOS = [
+            "Principia-Artificialis", "qsleuth", "polytope-explorer",
+            "qolas-synthesis", "quasar", "sovereign-evolution",
+            "slc-v12-", "edge-ai-primitives", "skn-v1-",
+            "coverage-preserving-synthesis", "sentinel-batadal-validation",
+            "sovereign-suite"
+          ]
+
+          nodes = []
+          edges = []
+          seen = set()
+
+          def add(id_, label, kind, repo, path=""):
+            if id_ in seen: return
+            seen.add(id_)
+            url = f"https://github.com/holland202/{repo}/blob/main/{path}" if path else f"https://github.com/holland202/{repo}"
+            nodes.append({"id": id_, "label": label, "kind": kind, "repo": repo, "url": url, "bytes": 0, "deg": 0, "cls": kind})
+
+          add("universe", "holland202 universe", "dir", "meta")
+          for r in REPOS:
+            add(r, r, "dir", r)
+            edges.append({"source": "universe", "target": r, "kind": "contains"})
+
+          # Add a few high-signal Principia files so the graph is not empty
+          core = [
+            ("README.md", "doc"),
+            ("WHITEPAPER.md", "doc"),
+            ("START_HERE.md", "doc"),
+            ("research_notes/note043_free_energy_of_reasoning.md", "doc"),
+            ("research_notes/note048_the_governor_is_the_dynamics.md", "doc"),
+            ("scripts/build_filegraph.py", "code"),
+            ("scripts/build_universe_graph.py", "code"),
+          ]
+          for p, k in core:
+            nid = f"Principia-Artificialis/{p}"
+            add(nid, Path(p).name, k, "Principia-Artificialis", p)
+            edges.append({"source": "Principia-Artificialis", "target": nid, "kind": "contains"})
+
+          # Edge-nodes
+          for i, e in enumerate(list(edges)):
+            eid = f"edge:{e['kind']}:{i}"
+            add(eid, e["kind"], "edge", "meta")
+            edges.append({"source": e["source"], "target": eid, "kind": "has_edge"})
+            edges.append({"source": eid, "target": e["target"], "kind": "has_edge"})
+
+          stats = {"files": sum(1 for n in nodes if n["kind"] not in ("dir","edge")),
+                   "dirs": sum(1 for n in nodes if n["kind"]=="dir"),
+                   "nodes": len(nodes), "edges": len(edges),
+                   "contains": sum(1 for e in edges if e["kind"]=="contains"),
+                   "sibling": 0, "builds_on": 0, "orphans": 0}
+
+          payload = {"nodes": nodes, "edges": edges, "stats": stats,
+                     "generated": "auto-built by GitHub Action"}
+
+          # Minimal self-contained HTML that still has the same visual language
+          html = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Universe Graph — holland202</title>
+<style>
+:root{{--void:#05070C;--hot:#FFB454;--text:#D6E2F0;--dim:#7288A3;--panel:#0C1119;--rule:#1A2431}}
+*{{margin:0;padding:0;box-sizing:border-box}}
+body{{background:var(--void);color:var(--text);font-family:ui-monospace,monospace;padding:28px;line-height:1.5}}
+h1{{font-family:Georgia,serif;color:var(--hot);font-size:26px;margin-bottom:8px}}
+.sub{{color:var(--dim);font-size:13px;margin-bottom:28px}}
+.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}}
+.card{{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px}}
+.card h3{{color:var(--hot);font-size:15px;margin-bottom:6px}}
+.card a{{color:#4FD6B8;font-size:12px;text-decoration:none}}
+.card a:hover{{text-decoration:underline}}
+.badge{{display:inline-block;font-size:10px;padding:2px 7px;border-radius:4px;background:rgba(255,180,84,.12);color:var(--hot);margin-bottom:8px}}
+</style></head><body>
+<h1>Universe Graph</h1>
+<p class="sub">All public holland202 repositories + core Principia files.<br>
+Each card links straight to the file or repo on GitHub.<br>
+Full force-directed 3D version coming once the measured edge list is merged.</p>
+<div class="grid">
+"""
+          for n in nodes:
+            if n["kind"] == "edge": continue
+            badge = n["kind"]
+            html += f'<div class="card"><div class="badge">{badge}</div><h3>{n["label"]}</h3>'
+            html += f'<a href="{n["url"]}" target="_blank">Open on GitHub →</a></div>\n'
+
+          html += """</div>
+<p style="margin-top:32px;color:var(--dim);font-size:12px">
+Generated automatically by GitHub Actions ·
+<a href="https://holland202.github.io/Principia-Artificialis/brain.html" style="color:#FFB454">Back to Second Brain</a>
+</p>
+</body></html>"""
+
+          Path("universe.html").write_text(html, encoding="utf-8")
+          print(f"Wrote universe.html with {len(nodes)} nodes")
+          EOF
+
+      - name: Commit universe.html
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add universe.html
+          git diff --staged --quiet || git commit -m "Auto-build universe graph [skip ci]"
+          git push
