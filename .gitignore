@@ -5,3 +5,9 @@ __pycache__/
 *.npz
 *.bak
 ~
+graph.html
+graph_files.html
+graph_data.json
+galaxy.html
+unified-ecosystem.html
+universe.html
