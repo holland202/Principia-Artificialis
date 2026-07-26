@@ -142,6 +142,22 @@ def scan(root):
 # ---------------------------------------------------------------- file graph
 FILE_NUM_RE = re.compile(r"(?:^|/)(?:note)?0*(\d{2,3})[_.]")
 SKIP_DIRS = (".git", "__pycache__", ".github")
+# Our own generated output must not appear in its own measurement, but a
+# hardcoded filename list is the wrong mechanism: it silently suppressed the
+# `brain.html ` trailing-space directory by skipping the only file inside it,
+# hiding a real defect. Generated files now identify themselves with a marker
+# line, so any filename works and files we did NOT generate always count.
+GEN_MARK = "principia-graph-generated"
+
+
+def _is_generated(path):
+    if not path.endswith(".html"):
+        return False
+    try:
+        with open(path, encoding="utf-8", errors="replace") as fh:
+            return GEN_MARK in fh.read(4096)
+    except OSError:
+        return False
 
 KIND_BY_EXT = {
     ".md": "doc", ".py": "code", ".sh": "code", ".thy": "proof",
@@ -164,6 +180,8 @@ def scan_files(root):
         for f in fs:
             rel = os.path.relpath(os.path.join(base, f), root)
             if rel.startswith(".") or "/." in rel:
+                continue
+            if _is_generated(os.path.join(base, f)):
                 continue
             paths.append(rel.replace("\\", "/"))
 
@@ -386,6 +404,7 @@ def selftest():
 
 
 HTML_SHELL = r"""<!DOCTYPE html>
+<!-- principia-graph-generated -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
