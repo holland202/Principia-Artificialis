@@ -1,195 +1,128 @@
-# 🚀 START HERE: COMPLETE SECP DEPLOYMENT GUIDE
+# START HERE
 
-## YOU HAVE 79 COMPLETE ARTIFACTS READY
+**Principia-Artificialis** is an open research program on the mathematics of
+artificial thought — information geometry, topology, dynamical systems, and
+thermodynamics applied to AI inference.
 
-All files are in `/mnt/user-data/outputs/` ready to download.
+It is a **notes program**, not a library. There is nothing to install and
+nothing to import. The artifact is a numbered series of research notes, each
+one carrying registered predictions and, where possible, runnable reference
+code that prints every number appearing in the prose.
 
----
-
-## 📋 WHAT'S INCLUDED
-
-### Python Code (25+ files)
-All production-ready LLM governance:
-- Core system (6 files)
-- Advanced features (5 files)
-- Production systems (5 files)
-- Advanced subsystems (4 files)
-
-### Documentation (40+ files)
-Complete guides for everything:
-- MASTER_USER_MANUAL.md ← **READ THIS FIRST**
-- QUICK_START_GUIDE.md ← Quick 15-min setup
-- INSTALLATION_GUIDE.md ← Detailed install
-- SECP_ARCHITECTURE.md ← Technical details
-- USER_GUIDE.md ← How to use
-- TRANSFER_AND_BACKUP_GUIDE.md ← Google Drive & Termux
-
-### Scripts (2+ files)
-- deploy_termux.sh ← Automated Termux setup
-- run_production.sh ← Launch system
-- run_dashboard.sh ← Dashboard server
+*Vincit Omnia Veritas.*
 
 ---
 
-## 🎯 THREE PATHS FORWARD
+## What you should expect to find
 
-### PATH 1: Desktop (15 min)
-1. Download all files
-2. `pip install [packages]`
-3. `python3 unified_launcher.py --env production`
-4. Access dashboard at http://localhost:8000
+Some notes are marked `REFUTED (kept)`. Those are not oversights. A note whose
+registered prediction failed stays in the series, marked, with an explanation of
+what the failure taught us. Deleting them would make the program look better and
+be worth less.
 
-### PATH 2: Termux (30 min)
-1. Download all files
-2. Copy to phone via USB
-3. Run: `bash deploy_termux.sh`
-4. Follow prompts
-5. Launch system
+Status labels in use, weakest to strongest:
 
-### PATH 3: Google Drive + Termux (Complete Setup)
-1. Upload all files to Google Drive
-2. Download to phone
-3. Copy to Termux
-4. Run deploy script
-5. Automatic backups configured
+`Speculative` · `Draft` · `Draft, verified reference code` ·
+`Architecture Verified` · `Architecture Self-Tested` · `Verified` ·
+`REFUTED (kept)`
+
+A `Speculative` note is a valid contribution. It describes an experiment
+someone else could build and does not pretend to have run it.
 
 ---
 
-## 📥 DOWNLOAD INSTRUCTIONS
+## Read in this order
 
-### All Files Are Ready
-
-Location: `/mnt/user-data/outputs/`
-
-**Download options:**
-1. Download as ZIP from web interface
-2. `rsync` from terminal
-3. Copy via USB to phone
-4. Upload to Google Drive first
-
-### Essential Files (Minimum)
-
-**Must have:**
-- All .py files (25+)
-- MASTER_USER_MANUAL.md
-- QUICK_START_GUIDE.md
-- deploy_termux.sh
-
-**Recommended:**
-- All .md documentation
-- SECP_ARCHITECTURE.md
-- TRANSFER_AND_BACKUP_GUIDE.md
+1. **[NOTES_INDEX.md](NOTES_INDEX.md)** — the generated index of every note.
+   Start here for the actual list. It is auto-generated; do not hand-edit it.
+2. **[NOTE_TEMPLATE.md](NOTE_TEMPLATE.md)** — the canonical spec. This is the
+   method, and it governs every note in the series.
+3. **[WHITEPAPER.md](WHITEPAPER.md)** — the longer-form framing.
+4. **[DRIFT_LEDGER.md](DRIFT_LEDGER.md)** — where claims that moved are recorded.
 
 ---
 
-## ⏱️ FASTEST SETUP: 5 MINUTES
+## The method
+
+1. State claims so they can be precisely wrong. If nothing could refute it, it
+   is not yet a note.
+2. Register predictions before running. Numbered P1, P2, …
+3. Include an anti-vacuity control — show the instrument *can* return null. A
+   guard that only ever prints a value is a log line, not a guard.
+4. Refutations are first-class. Keep them, mark them, explain them.
+5. Numbers in prose must match code output verbatim. Paste them; don't
+   paraphrase them.
+6. Leave at least one prediction unrun. Every note ends with a door.
+7. Failures lead the document. What broke goes at the top, not in a footnote.
+
+---
+
+## Layout
+
+| Path | Contents |
+|---|---|
+| `research_notes/` | The note series. Canonical home for all notes. |
+| `scripts/` | One `noteNNN_reference.py` per note, plus figure generators and `make_index.py`. |
+| `whitepapers/` | Longer writeups. |
+| `sovereign_core/` | Governance engine and its test suite. |
+| `figures/` | Generated images — regenerate, don't edit. |
+| `experiments/`, `simulations/` | Experiment code. |
+| `formal/`, `references/`, `discussions/`, `datasets/`, `data/` | Supporting material. |
+
+Reference code is deliberately dependency-light (NumPy-tier) and prints every
+number that appears in its note.
+
+---
+
+## Running things
 
 ```bash
-# Download files to ~/sovereign_core
-pip install fastapi uvicorn anthropic openai numpy scipy pytest pyyaml
-
-export ANTHROPIC_API_KEY="sk-ant-YOUR_KEY"
-export OPENAI_API_KEY="sk-YOUR_KEY"
-
-cd ~/sovereign_core
-python3 unified_launcher.py --env production
+make synthetic                            # run all synthetic demos
+make report                               # show results/last_run_report.json
+python scripts/make_index.py              # regenerate NOTES_INDEX.md after editing notes
+python sovereign_core/test_sovereign.py   # governance suite
 ```
 
-Open browser: http://localhost:8000
+`make real` additionally attempts a real model eval and needs a GPU and
+`transformers`.
 
 ---
 
-## 📱 TERMUX SETUP: 20 MINUTES
+## Known defects
 
-```bash
-# In Termux:
-bash deploy_termux.sh
+These are recorded openly rather than quietly fixed. Read
+[CLAUDE.md](CLAUDE.md) for the full list before "fixing" anything. In short:
 
-# Follow prompts:
-# - Updates system
-# - Installs dependencies
-# - Verifies installation
-# - Creates launch scripts
-
-# Set API keys:
-nano ~/.bashrc
-
-# Launch:
-bash run_production.sh
-```
+- **Note numbers collide.** Several numbers are claimed by more than one note.
+  `NOTES_INDEX.md` marks these with ⚡. Collisions are *displayed*, not resolved
+  by silent renumbering.
+- **Two naming conventions are live** — `NNN_*.md` and `noteNNN_*.md`. Both are
+  indexed. A file matching neither is invisible to the index.
+- **`notes/` is a stray directory** duplicating numbers already used in
+  `research_notes/`. Consolidating it changes note numbering — ask first.
+- **The link graph is thin.** Most cross-references live in prose
+  `**Builds on:**` fields rather than `[[wikilinks]]`, so the vault graph looks
+  sparser than the citation network actually is. Converting those is open work.
 
 ---
 
-## 📚 DOCUMENTATION ROADMAP
+## Contributing
 
-**Start here (5 min):**
-1. ✅ START_HERE.md (this file)
-2. ✅ QUICK_START_GUIDE.md
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and [DISCUSSION_NORMS.md](DISCUSSION_NORMS.md).
 
-**Learn system (30 min):**
-3. ✅ MASTER_USER_MANUAL.md (comprehensive)
-4. ✅ INSTALLATION_GUIDE.md (detailed setup)
+Contributors include humans and named AI systems (Claude, GPT, Grok, Kimi,
+DeepSeek, Perplexity). AI contributions are credited by model name in the note
+header. This is deliberate — do not strip AI attribution.
 
-**Understand architecture (1 hour):**
-5. ✅ SECP_ARCHITECTURE.md (technical)
-6. ✅ ARCHITECTURE.md (design)
+Before opening a PR on a new note:
 
-**Advanced:**
-7. ✅ USER_GUIDE.md (how to use)
-8. ✅ ADVANCED_SYSTEMS_SUMMARY.md (deep features)
-
-**Operations:**
-9. ✅ TRANSFER_AND_BACKUP_GUIDE.md (Google Drive/Termux)
-10. ✅ Artifact files have example code
-
----
-
-## 🔑 API KEYS (Required)
-
-### Get Keys
-
-1. **Anthropic Claude:**
-   - https://console.anthropic.com
-   - Create account
-   - Get API key
-
-2. **OpenAI GPT:**
-   - https://platform.openai.com
-   - Create account
-   - Get API key
-
-### Set Keys
-
-**Desktop:**
-```bash
-export ANTHROPIC_API_KEY="sk-ant-YOUR_ACTUAL_KEY"
-export OPENAI_API_KEY="sk-YOUR_ACTUAL_KEY"
-```
-
-**Termux:**
-```bash
-nano ~/.bashrc
-# Add above lines
-source ~/.bashrc
-echo $ANTHROPIC_API_KEY  # Verify
-```
-
----
-
-## ✅ VERIFICATION CHECKLIST
-
-- [ ] All 79 files downloaded
-- [ ] Python 3.10+ installed
-- [ ] API keys obtained
-- [ ] Dependencies installed
-- [ ] Installation tested (see below)
-- [ ] Ready to deploy
-
-### Quick Test
-
-```bash
-python3 << 'EOF'
-from sovereign_core import SovereignCore
-core = SovereignCore()
-result = core.run("What is AI?")
-print(f"✓ System working: {result.response[:50]}...")
+- [ ] filename matches `NNN_*.md` or `noteNNN_*.md` exactly
+- [ ] status label is honest
+- [ ] claims registered and numbered (P1, P2, …)
+- [ ] anti-vacuity control present — the instrument can return null
+- [ ] any refuted claim kept and marked
+- [ ] every number in the prose matches `scripts/noteNNN_reference.py` output
+- [ ] at least one open prediction left unrun
+- [ ] at least one outgoing `[[wikilink]]` to a related note
+- [ ] credit given, including to AI contributors
+- [ ] `python scripts/make_index.py` re-run and the note appears
