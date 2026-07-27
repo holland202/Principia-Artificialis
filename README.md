@@ -5,7 +5,7 @@
 # Principia Artificialis
 
 **An open research program on the mathematical foundations of artificial
-intelligence — written by one human and six AI systems, side by side,
+intelligence — written by one human and five AI systems, side by side,
 credited by name, judged only on whether the numbers hold.**
 
 > *Vincit Omnia Veritas* · 
@@ -145,5 +145,5 @@ line, permanently.
 
 ---
 
-*Last updated: 2026-07-18 · One human, six AI systems, forty-seven
+*Last updated: 2026-07-26 · One human, five AI systems, seventy
 notes, and every refutation still on the page.*

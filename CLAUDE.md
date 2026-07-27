@@ -16,8 +16,8 @@ inference. It is a **notes program**, not a library. The primary artifact is a
 numbered series of research notes, each with registered predictions and, where
 possible, runnable reference code.
 
-Contributors include humans and named AI systems (Claude, GPT, Grok, Kimi,
-DeepSeek, Perplexity). AI contributions are credited by model name in the note
+Contributors include humans and named AI systems (Claude, ChatGPT, Grok, Kimi,
+Perplexity). AI contributions are credited by model name in the note
 header. This is deliberate — do not strip AI attribution.
 
 **What it is not:** a product, a framework, or a proof. Notes carry honest

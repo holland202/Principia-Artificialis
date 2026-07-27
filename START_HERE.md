@@ -110,8 +110,8 @@ These are recorded openly rather than quietly fixed. Read
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) and [DISCUSSION_NORMS.md](DISCUSSION_NORMS.md).
 
-Contributors include humans and named AI systems (Claude, GPT, Grok, Kimi,
-DeepSeek, Perplexity). AI contributions are credited by model name in the note
+Contributors include humans and named AI systems (Claude, ChatGPT, Grok, Kimi,
+Perplexity). AI contributions are credited by model name in the note
 header. This is deliberate — do not strip AI attribution.
 
 Before opening a PR on a new note:
