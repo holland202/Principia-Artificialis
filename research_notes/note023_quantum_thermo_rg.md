@@ -1,5 +1,7 @@
 # Note #023 — Quantum Thermodynamic Renormalization Framework
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Thesis
 
 <<<<<<< HEAD

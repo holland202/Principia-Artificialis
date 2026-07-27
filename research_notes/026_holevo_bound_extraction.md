@@ -1,5 +1,7 @@
 # Research Note #026: The Holevo Bound as a Ceiling on What Can Be Extracted from Hidden States
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 If a model's hidden state at a given layer is treated as encoding a

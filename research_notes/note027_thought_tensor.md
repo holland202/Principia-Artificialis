@@ -1,5 +1,7 @@
 # Note #027 — The Thought Tensor: A Covariant Object for Artificial Cognition
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Thesis
 
 There exists a single, covariant mathematical object — the **Thought Tensor** (mathcal{T}) — that encodes the full cognitive state of an artificial agent across:

@@ -1,5 +1,7 @@
 # Research Note #015: Category-Theoretic Compositionality of Reasoning Steps
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 *This note was listed in the README table across several sessions without
 ever being written -- filling that gap here rather than leaving the broken
 reference in place again.*

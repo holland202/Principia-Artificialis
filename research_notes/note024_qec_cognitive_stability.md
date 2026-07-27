@@ -1,5 +1,7 @@
 # Note #024 — Quantum Error Correction as Cognitive Stability
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Thesis
 The layered representation dynamics of the model can be understood as a **quantum error-correcting code (QECC)** over a latent Hilbert space, where:
 - Logical information = task-relevant abstract structure.

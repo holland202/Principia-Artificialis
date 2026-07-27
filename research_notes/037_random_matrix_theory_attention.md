@@ -1,5 +1,7 @@
 # Research Note #037: Random Matrix Theory Level-Spacing Statistics on Attention Weight Spectra
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 Quantum chaos theory has a precise, well-tested way to distinguish

@@ -1,5 +1,7 @@
 # Research Note #008: A Falsification Protocol for Note #002 (Hallucinations as Topological Defects)
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 This note doesn't propose new math -- it proposes the specific control

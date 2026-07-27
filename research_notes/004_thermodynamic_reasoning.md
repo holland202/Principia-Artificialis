@@ -1,5 +1,7 @@
 # Research Note #004: Thermodynamic Quantities in Successful Reasoning
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 There exists a thermodynamic-like free energy or entropy production rate associated with coherent reasoning trajectories.

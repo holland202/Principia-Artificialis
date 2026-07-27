@@ -1,5 +1,7 @@
 # Research Note #020: Optimal Transport as a Model for "Thought Transport"
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 *Directly follows up on Note #005's Open Question: "Links to optimal
 transport and Wasserstein geometry for 'thought transport'?"*
 

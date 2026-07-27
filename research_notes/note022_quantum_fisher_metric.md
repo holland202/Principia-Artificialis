@@ -1,5 +1,7 @@
 # Note #022 — Quantum Fisher Information Metric on Representation Space
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Motivation
 
 Extend the classical Fisher-Rao geometry (Note #020) to quantum states, enabling analysis of:

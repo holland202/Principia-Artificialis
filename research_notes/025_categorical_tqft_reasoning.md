@@ -1,5 +1,7 @@
 # Research Note #025: Topological Quantum Field Theory as a (Highly Speculative) Model for Reasoning Composition
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Epistemic Status (read first)
 
 This is the most speculative note in the collection so far. The underlying

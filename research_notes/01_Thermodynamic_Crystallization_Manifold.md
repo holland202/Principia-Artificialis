@@ -1,5 +1,7 @@
 # TGCR_V1: Variational Action Minimization and Geodesic Crystallization
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## 1. Topological Mandate & State Space
 The SOVEREIGN_LOGIC_CORE operates strictly within a simply connected manifold $\mathcal{M}_r$. All probability vectors must collapse deterministically. Hallucinations are mathematically defined as topological holes ($\beta_1 > 0$) and are purged via the Veritas Gate.
 

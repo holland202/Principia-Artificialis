@@ -1,5 +1,7 @@
 # Note #025 — Measurement, Collapse, and Decision Boundaries
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Thesis
 The final readout layer of the model can be interpreted as a **quantum measurement** on the latent state \(\rho_L\):
 - Pre-readout state: superposition over outputs.

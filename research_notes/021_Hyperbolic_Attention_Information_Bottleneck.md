@@ -1,5 +1,7 @@
 # Note #021: Hyperbolic Attention and the Information Geometric Bottleneck
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## 1. The Euclidean Failure Mode
 Current Transformer architectures compute scaled dot-product attention in flat Euclidean space ($\mathbb{R}^n$). However, complex relational knowledge (ontologies, causality, logic trees) grows exponentially, meaning Euclidean space suffers from severe crowding at the boundaries.
 

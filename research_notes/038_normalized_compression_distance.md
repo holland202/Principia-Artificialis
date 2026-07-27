@@ -1,5 +1,7 @@
 # Research Note #038: Normalized Compression Distance as a Model-Agnostic Complexity Metric for Reasoning Traces
 
+**Status:** Draft | **Labeled:** 2026-07-26 (auto-classified: reference script present, no registered predictions)
+
 ## Why this note is different from the rest of the collection
 
 Every other note here needs some form of model access -- hidden states,

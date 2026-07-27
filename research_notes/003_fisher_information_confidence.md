@@ -1,5 +1,7 @@
 # Research Note #003: Can Fisher Information Predict Confidence Better Than Logits?
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 Fisher Information provides a more geometrically grounded measure of model confidence than raw logit entropy.

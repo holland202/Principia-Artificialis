@@ -1,5 +1,7 @@
 # Research Note #006: Can Tensor-Train Compression Reveal the "Effective Rank" of Reasoning?
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 Transformer weight matrices are dense, but the tensor-train (TT) decomposition

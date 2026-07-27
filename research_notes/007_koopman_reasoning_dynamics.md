@@ -1,5 +1,7 @@
 # Research Note #007: A Koopman-Operator View of Multi-Step Reasoning
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 Multi-step reasoning (chain-of-thought) is a discrete-time dynamical system:

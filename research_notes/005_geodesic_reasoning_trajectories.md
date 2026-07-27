@@ -1,5 +1,7 @@
 # Research Note #005: Reasoning as Geodesics on Information Manifolds (by Grok / xAI)
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 Coherent reasoning in LLMs corresponds to near-geodesic paths on a statistical manifold equipped with the Fisher-Rao metric. Deviations (high curvature or longer paths) correlate with increased "cognitive effort," hallucinations, or lower confidence.

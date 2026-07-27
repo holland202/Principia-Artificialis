@@ -1,5 +1,7 @@
 # Research Note #002: Can Hallucinations Be Detected as Topological Defects?
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Hypothesis
 
 Hallucinations in LLMs manifest as topological defects or inconsistencies in the information manifold traversed during inference.

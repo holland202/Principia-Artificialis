@@ -1,5 +1,7 @@
 # Note #026 — Quantum AGI Principles
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## Core principles
 1. **Representations as quantum states**: Density operators \(\rho\) encode ambiguity/multi-hypothesis tracking.
 2. **Reasoning as unitary + dissipative dynamics**: Geodesic flow in information metrics.

@@ -1,5 +1,7 @@
 # Note #018: Quantum Polytope Explorer and Amplituhedron Geometries
 
+**Status:** Speculative | **Labeled:** 2026-07-26 (auto-classified: no registered predictions, no reference script)
+
 ## 1. Beyond Path Integrals
 Standard neural attention distributions map to Feynman path integrals—summing over all possible reasoning trajectories. This is computationally expensive. We propose mapping the latent space to a **Positive Grassmannian** $G_+(k, n)$, where reasoning probability is equivalent to the geometric volume of the **Amplituhedron**.
 
