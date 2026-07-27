@@ -15,8 +15,8 @@ credited by name, judged only on whether the numbers hold.**
 | | count |
 |---|---|
 | Notes | **70** |
-| — Speculative (labeled analogy, not established) | 38 |
-| — Draft (argued, not yet computed) | 20 |
+| — Speculative (labeled analogy, not established) | 39 |
+| — Draft (argued, not yet computed) | 19 |
 | — Verified (reference code prints every number claimed) | 9 |
 | — **Refuted and kept** (a registered claim failed; the note stays) | 3 |
 | Runnable reference scripts | 11 |
