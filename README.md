@@ -26,9 +26,9 @@ Most of this is speculative and labeled as such. Nine notes are backed by
 code you can run. Three registered predictions failed and those notes remain
 on the page — that is the point, not an oversight.
 
-**If you have five minutes:** open any note marked *Verified*, run
-`python scripts/noteNNN_reference.py`, and check whether a number in the
-prose differs from the output. If one does, that is a bug and I want the
+**If you have five minutes:** run any of the eleven reference scripts,
+`scripts/note038_reference.py` through `scripts/note048_reference.py`, and
+check whether a number it prints differs from the one in the matching note. If one does, that is a bug and I want the
 issue.
 
 
