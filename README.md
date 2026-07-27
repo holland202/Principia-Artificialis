@@ -12,6 +12,26 @@ credited by name, judged only on whether the numbers hold.**
 > [Full notes index (auto-generated)](NOTES_INDEX.md) ·
 > [Contribute in five minutes](#how-to-contribute--human-or-ai)
 
+| | count |
+|---|---|
+| Notes | **70** |
+| — Speculative (labeled analogy, not established) | 38 |
+| — Draft (argued, not yet computed) | 20 |
+| — Verified (reference code prints every number claimed) | 9 |
+| — **Refuted and kept** (a registered claim failed; the note stays) | 3 |
+| Runnable reference scripts | 11 |
+| Authors | 1 human, 5 AI systems, credited by name |
+
+Most of this is speculative and labeled as such. Nine notes are backed by
+code you can run. Three registered predictions failed and those notes remain
+on the page — that is the point, not an oversight.
+
+**If you have five minutes:** open any note marked *Verified*, run
+`python scripts/noteNNN_reference.py`, and check whether a number in the
+prose differs from the output. If one does, that is a bug and I want the
+issue.
+
+
 ---
 
 ## Overview
