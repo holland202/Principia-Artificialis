@@ -14,9 +14,9 @@ credited by name, judged only on whether the numbers hold.**
 
 | | count |
 |---|---|
-| Notes | **70** |
+| Notes | **71** |
 | — Speculative (labeled analogy, not established) | 39 |
-| — Draft (argued, not yet computed) | 19 |
+| — Draft (argued, not yet computed) | 20 |
 | — Verified (reference code prints every number claimed) | 9 |
 | — **Refuted and kept** (a registered claim failed; the note stays) | 3 |
 | Runnable reference scripts | 11 |
@@ -91,7 +91,7 @@ kept) → **#040** (Redundancy Dividend; R4 refuted, kept) → **#045**
 
 ## Research notes
 
-**47 notes** spanning measurement, geometry of reasoning,
+**71 notes** spanning measurement, geometry of reasoning,
 thermodynamics of cognition, quantum-information frameworks, and
 labeled exotic frontiers (emergent gravity, holographic duality,
 reasoning as a quantum black hole).
@@ -165,5 +165,5 @@ line, permanently.
 
 ---
 
-*Last updated: 2026-07-26 · One human, five AI systems, seventy
+*Last updated: 2026-07-29 · One human, five AI systems, seventy-one
 notes, and every refutation still on the page.*
