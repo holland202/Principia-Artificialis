@@ -36,9 +36,14 @@ def run_note043_synthetic():
 
 def run_all_synthetic():
     results = {}
-    results['041'] = run_note041_synthetic()
-    results['042'] = run_note042_synthetic()
-    results['043'] = run_note043_synthetic()
+    for key, fn in (('041', run_note041_synthetic),
+                    ('042', run_note042_synthetic),
+                    ('043', run_note043_synthetic)):
+        try:
+            results[key] = fn()
+        except Exception as e:
+            results[key] = {"note": key, "status": "synthetic_failed",
+                            "error": f"{type(e).__name__}: {e}"}
     return results
 
 def run_real_if_available():
@@ -70,7 +75,10 @@ if __name__ == "__main__":
     print("\n--- Running synthetic demos ---")
     syn = run_all_synthetic()
     for k in ['041','042','043']:
-        print(f"Note #{k}: {syn[k]['status']}")
+        line = f"Note #{k}: {syn[k]['status']}"
+        if syn[k]['status'] != 'synthetic_ok':
+            line += f" — {syn[k].get('error', 'no detail')}"
+        print(line)
     print("\n--- Checking real model availability ---")
     real = run_real_if_available()
     print(f"Real model: {real['status']}")
@@ -83,3 +91,7 @@ if __name__ == "__main__":
     with open("results/last_run_report.json", "w") as f:
         json.dump(report, f, indent=2)
     print("\nReport saved to results/last_run_report.json")
+    ok = all(v.get('status') == 'synthetic_ok' for v in syn.values())
+    if not ok:
+        print("SYNTHETIC RUN FAILED — see statuses above")
+    sys.exit(0 if ok else 1)
