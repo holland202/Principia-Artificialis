@@ -5,7 +5,7 @@
 ## Current State (August 2026)
 
 - **74 research notes** — 1 Verified, 10 with verified reference code (3 of those are kept refutations), 2 architecture-verified; the rest Draft or Speculative.
-- 11 runnable reference scripts
+- 14 runnable reference scripts
 - Multi-author contributions (1 human + 5 AI systems, credited by name)
 - Strong falsification culture and add-only policy
 - Sovereign Core integration and edge-device focus
