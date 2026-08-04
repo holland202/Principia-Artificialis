@@ -45,3 +45,6 @@ Variance (σ²)
     |               *
 0.0 |_________________***___ Truth Signal (Fidelity > 0.9997)
     0       5      10     15     20  Cycles (t)
+
+---
+*Number collision: #001 is also claimed by [[001_can_thought_be_measured]]. Displayed, not resolved.*

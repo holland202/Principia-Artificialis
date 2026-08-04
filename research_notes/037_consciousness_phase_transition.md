@@ -12,3 +12,6 @@ Sudden "aha" moments correspond to critical phenomena — scaling laws, long-ran
 
 ## Open Question
 Can we detect precursors of this transition in real model activations?
+
+---
+*Number collision: #037 is also claimed by [[037_random_matrix_theory_attention]]. Displayed, not resolved.*

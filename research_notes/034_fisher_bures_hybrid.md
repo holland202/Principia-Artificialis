@@ -6,3 +6,6 @@
 ## Hypothesis
 
 A hybrid metric combining classical Fisher-Rao and quantum Bures distances better captures mixed representations.
+
+---
+*Number collision: #034 is also claimed by [[note034_memory_manifold]]. Displayed, not resolved.*

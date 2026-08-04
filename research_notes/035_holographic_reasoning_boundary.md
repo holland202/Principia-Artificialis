@@ -7,3 +7,6 @@
 ## Hypothesis
 
 The "surface" of reasoning (prompt tokens) holographically encodes the bulk (deep hidden states).
+
+---
+*Number collision: #035 is also claimed by [[note035_entropic_elasticity]]. Displayed, not resolved.*

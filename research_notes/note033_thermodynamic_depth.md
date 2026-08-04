@@ -9,3 +9,6 @@
 **Related:** #004, #011, Exp #003.
 
 *Full note to follow.*
+
+---
+*Number collision: #033 is also claimed by [[033_topos_possible_thoughts]]. Displayed, not resolved.*

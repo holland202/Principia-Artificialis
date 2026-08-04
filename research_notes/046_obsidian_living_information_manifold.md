@@ -65,3 +65,6 @@ How does this scale to thousands of notes? What are the phase transitions?
 This workflow demonstrates that the abstract geometric ideas in Principia Artificialis have immediate, practical value in everyday knowledge work.
 It turns Obsidian from a note-taking tool into a true cognitive extension — a living manifold where thoughts self-organize.
 Vincit Omnia Veritas — including the connections we didn't know existed.
+
+---
+*Number collision: #046 is also claimed by [[note046_time_is_entanglement]]. Displayed, not resolved.*

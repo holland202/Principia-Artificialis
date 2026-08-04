@@ -16,3 +16,6 @@ Information paradox analog: does all prompt information get preserved in the fin
 ```python
 print("Exotic black hole reasoning simulator — horizon crossing in latent space")
 Pure frontier — mixes GR, quantum info, and AI in a way no one else is doing.
+
+---
+*Number collision: #036 is also claimed by [[note036_verified_models_drift_ledgers]]. Displayed, not resolved.*

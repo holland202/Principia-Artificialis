@@ -173,3 +173,6 @@ A simple figure:
 - Highlighted loop with non‑trivial holonomy.
 
 This can be implemented as `figures/note034_memory_manifold.png` in a follow‑up commit.
+
+---
+*Number collision: #034 is also claimed by [[034_fisher_bures_hybrid]]. Displayed, not resolved.*

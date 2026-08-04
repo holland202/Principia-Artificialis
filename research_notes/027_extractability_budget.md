@@ -88,3 +88,6 @@ Any single kill condition, replicated, retires the conjecture. Surviving all thr
 ---
 
 *Vincit Omnia Veritas — conjectures are verified or killed, never defended.*
+
+---
+*Number collision: #027 is also claimed by [[note027_thought_tensor]]. Displayed, not resolved.*

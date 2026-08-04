@@ -40,3 +40,6 @@ This concept reframes forgetting not as failure, but as a geometric inevitabilit
 - Do larger models have larger "event horizons," allowing more ideas to reach awareness?
 
 **Vincit Omnia Veritas** — even the thoughts we never knew we had.
+
+---
+*Number collision: #045 is also claimed by [[note045_stubbornness]]. Displayed, not resolved.*

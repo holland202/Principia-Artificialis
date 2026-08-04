@@ -128,3 +128,6 @@ A simple figure:
 - Highlight a “Goldilocks band” of intermediate (F).
 
 Implemented as `figures/note035_entropic_elasticity.png` with data in `data/note035_entropic_elasticity.csv`.
+
+---
+*Number collision: #035 is also claimed by [[035_holographic_reasoning_boundary]]. Displayed, not resolved.*

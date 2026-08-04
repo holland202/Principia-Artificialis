@@ -132,3 +132,6 @@ if __name__ == "__main__":
 - Is "symmetric monoidal category with duals" even a reasonable structural claim for reasoning, or does it smuggle in an assumption (e.g. that splitting and recombining is always well-defined) that's false for real multi-hop reasoning?
 - If real hidden states don't satisfy the Frobenius identity, is that because the analogy is wrong, or because the *specific* toy algebra chosen doesn't match the model's actual algebra (there are many inequivalent Frobenius algebras)?
 - Is there a weaker, more defensible claim buried in here (e.g. "some" cobordism-like structure exists without insisting on the full 2D TQFT classification) that would survive contact with real data even if the strong version doesn't?
+
+---
+*Number collision: #025 is also claimed by [[note025_measurement_and_decision]]. Displayed, not resolved.*

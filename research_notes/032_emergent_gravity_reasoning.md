@@ -7,3 +7,6 @@
 ## Hypothesis
 
 Inconsistencies in long reasoning chains induce effective curvature (gravity analog) in the information manifold.
+
+---
+*Number collision: #032 is also claimed by [[note032_curvature_of_reasoning]]. Displayed, not resolved.*

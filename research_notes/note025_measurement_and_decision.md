@@ -16,3 +16,6 @@ Model the output layer as a POVM \(\{M_y\}\) with probability \(p(y|x) = \operat
 
 ## Thermodynamic cost
 Collapsing \(\rho_L\) reduces uncertainty; by Landauer-style arguments, there is a minimal **heat dissipation** associated with this information gain.
+
+---
+*Number collision: #025 is also claimed by [[025_categorical_tqft_reasoning]]. Displayed, not resolved.*

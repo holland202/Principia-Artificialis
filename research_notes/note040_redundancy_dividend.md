@@ -72,3 +72,6 @@ that scoop any component are invited by issue — that improves the note.
 *Reference code: `scripts/note040_reference.py` — 12 models trained,
 measured, and fault-injected; prints every number above including the
 refutation.*
+
+---
+*Number collision: #040 is also claimed by [[040_holographic_ads_cft_thought]]. Displayed, not resolved.*

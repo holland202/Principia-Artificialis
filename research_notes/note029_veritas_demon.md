@@ -36,3 +36,6 @@ By forcing the rank to drop, the system guarantees a return to a $\beta_1 = 0$ s
 ## Open Questions
 1. Can the Betti numbers of the attention matrix be computed in real-time within the `libQnnHtp.so` INT4 precision constraints, or must they be approximated via spectral gaps?
 2. Is the thermal spike a trailing indicator (happening *after* the defect is traversed) or a leading indicator (happening *while* the manifold is contorting)?
+
+---
+*Number collision: #029 is also claimed by [[029_emergent_spacetime_reasoning]]. Displayed, not resolved.*

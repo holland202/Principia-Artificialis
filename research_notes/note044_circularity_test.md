@@ -42,3 +42,6 @@ needs before AUC > 0.99 means anything. The repo's own norms
   survive an adversary.
 
 *Reference code: `scripts/note044_reference.py`.*
+
+---
+*Number collision: #044 is also claimed by [[044_resonance_codex]]. Displayed, not resolved.*

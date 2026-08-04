@@ -10,3 +10,6 @@
 5. **Decision as measurement**: Output layers implement POVMs; collapse = selection.
 6. **Thermodynamic efficiency**: Inference as a work/heat cycle with measurable bounds.
 7. **Compositionality**: Cognitive operations compose via category-theoretic structures (tensors, duals).
+
+---
+*Number collision: #026 is also claimed by [[026_holevo_bound_extraction]]. Displayed, not resolved.*

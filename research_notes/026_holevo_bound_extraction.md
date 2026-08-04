@@ -128,3 +128,6 @@ if __name__ == "__main__":
 - What's the right choice of "cluster" granularity -- too coarse and $\chi$ is trivially high (clusters look separable when the real concept boundaries aren't), too fine and every point is its own cluster and the bound becomes vacuous.
 - Is a k-means clustering of hidden states even a reasonable proxy for "the concept ensemble," or does it presuppose the answer to what the model's actual representational units are?
 - Does the extraction gap correlate with anything independently interesting (e.g. downstream task performance), or is it just a restatement of probe quality?
+
+---
+*Number collision: #026 is also claimed by [[note026_quantum_agi_principles]]. Displayed, not resolved.*

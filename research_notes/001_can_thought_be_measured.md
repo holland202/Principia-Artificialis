@@ -21,3 +21,5 @@ Is the geodesic length correlated with reasoning difficulty?
 ## Open Questions
 
 ...
+---
+*Number collision: #001 is also claimed by [[001_thermodynamic_crystallization_manifold]]. Displayed, not resolved.*

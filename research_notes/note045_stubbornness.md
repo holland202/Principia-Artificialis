@@ -23,3 +23,6 @@ Not established. A weaker, true statement: *at 20 neurons on a 1-bit task, redun
 - **U6** Safety inversion: does *targeted* unlearning of high-redundancy knowledge cause more collateral damage to unrelated capabilities than unlearning concentrated knowledge? (Predicted: yes — you cannot silence a redundant chorus without silencing the room.)
 
 *Reference code: `scripts/note045_reference.py` — prints every number above, including both failures.*
+
+---
+*Number collision: #045 is also claimed by [[045_null_geodesics_forgotten_thought]]. Displayed, not resolved.*

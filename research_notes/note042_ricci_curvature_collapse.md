@@ -194,3 +194,6 @@ and \( T \) is a temperature parameter (set to 1 for now). The phase transition 
 \text{Hallucination probability} \approx \sigma\left( \beta \, \min_t \kappa(t) + \gamma \right)
 \]
 where \( \sigma \) is the logistic function, and \( \beta, \gamma \) are learned parameters. This is a registered prediction for future experiments.
+
+---
+*Number collision: #042 is also claimed by [[042_symphony_fractal_thought]]. Displayed, not resolved.*

@@ -178,3 +178,6 @@ Drift event:
 - Possibly a small script that:
   - Parses labels (Prototype/Candidate/Verified) from comments or metadata.
   - Summarizes envelope coverage.
+
+---
+*Number collision: #036 is also claimed by [[036_reasoning_quantum_black_hole]]. Displayed, not resolved.*

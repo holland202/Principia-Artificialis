@@ -51,3 +51,6 @@ point where those two vantages meet — and it runs.
 
 *Reference code: `scripts/note046_reference.py` — every number above,
 at machine precision, in under a second.*
+
+---
+*Number collision: #046 is also claimed by [[046_obsidian_living_information_manifold]]. Displayed, not resolved.*

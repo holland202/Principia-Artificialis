@@ -122,3 +122,6 @@ if __name__ == "__main__":
 - Does the choice of compressor matter (gzip/DEFLATE has a small window; would a PPM or context-mixing compressor, which can model longer-range structure, give a meaningfully different signal)?
 - Chain-of-thought traces are much shorter than the genomes/documents NCD is usually applied to -- does NCD's approximation quality hold up at this length, or does compressor overhead dominate the signal?
 - If NCD turns out to correlate strongly with Note #003's Fisher Information trace or #006's tensor-train critical rank, is that evidence they're measuring a shared underlying quantity, or just evidence that "text length and repetitiveness" is a confound behind all of them?
+
+---
+*Number collision: #038 is also claimed by [[038_chrono_geometric_reasoning]] and [[note038_free_physics_principle]]. Displayed, not resolved.*

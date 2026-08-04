@@ -369,3 +369,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+---
+*Number collision: #043 is also claimed by [[043_topological_quantum_computer_reasoning]]. Displayed, not resolved.*

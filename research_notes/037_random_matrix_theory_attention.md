@@ -131,3 +131,6 @@ if __name__ == "__main__":
 - Is $W_Q W_K^T$ (or any single-matrix summary of a full attention head) even the right object to analyze, given attention is a bilinear form, not a linear operator with a single natural spectrum?
 - How much data (how many heads/layers/models) is needed before a KS test has any real power here, given spectral statistics are traditionally computed on much larger matrices than a single attention head provides?
 - If different layers show different statistics, is that a "chaos vs. structure" finding, or simply a restatement of known facts about attention specialization (e.g. induction heads having distinctive weight structure) via a fancier vocabulary?
+
+---
+*Number collision: #037 is also claimed by [[037_consciousness_phase_transition]]. Displayed, not resolved.*

@@ -156,3 +156,6 @@ where V is the information manifold (equipped with Fisher-Rao or quantum Fisher 
 - Falsifiability criteria.
 
 Computed figures (see generate_note027_figure.py): decomposition visualization, geodesic flow embedding.
+
+---
+*Number collision: #027 is also claimed by [[027_extractability_budget]]. Displayed, not resolved.*

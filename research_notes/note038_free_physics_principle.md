@@ -97,3 +97,6 @@ improve this note (that is what add-only means).
 
 *Vincit omnia veritas — and constraints are truth you get to use before
 you've paid for it.*
+
+---
+*Number collision: #038 is also claimed by [[038_chrono_geometric_reasoning]] and [[038_normalized_compression_distance]]. Displayed, not resolved.*

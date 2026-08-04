@@ -20,3 +20,6 @@ Track geodesic deviation vs chain length; test for metric signature changes.
 ## Reference Code
 ```python
 print("Emergent spacetime simulation stub — frontier direction")
+
+---
+*Number collision: #029 is also claimed by [[note029_veritas_demon]]. Displayed, not resolved.*

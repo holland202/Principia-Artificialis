@@ -71,3 +71,6 @@ with a 60-line script.
 
 *Reference code: `scripts/note039_reference.py` — prints every number
 above, including the refuted D2.*
+
+---
+*Number collision: #039 is also claimed by [[039_quantum_foam_reasoning]]. Displayed, not resolved.*

@@ -111,3 +111,6 @@ if __name__ == "__main__":
 **P5:** The correlation with reasoning steps (**P2**) will hold across different model scales (GPT‑2 small, medium, large) with consistent slope.
 
 The door is open: any contributor with access to a transformer and a reasoning dataset can run the reference code above to accept or refute **P1** and **P2**. If refuted, this note becomes a valuable record of a failed claim. If confirmed, it provides a cheap, structural signature of reasoning depth.
+
+---
+*Number collision: #041 is also claimed by [[041_retrocausal_self_consistency]]. Displayed, not resolved.*

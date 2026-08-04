@@ -132,3 +132,6 @@ A simple figure:
 - Inset: plot of ( kappa(t) ) vs. ( t ) for one trajectory.
 
 This can be implemented as `figures/note032_curvature_trajectories.png` in a follow‑up commit.
+
+---
+*Number collision: #032 is also claimed by [[032_emergent_gravity_reasoning]]. Displayed, not resolved.*

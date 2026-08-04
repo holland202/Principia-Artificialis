@@ -35,3 +35,6 @@ The braid group B_n acts on the Hilbert space of the information manifold. A rea
 - Does fine-tuning correspond to "braid tightening"?
 
 **Vincit Omnia Veritas** — even in the braid.
+
+---
+*Number collision: #043 is also claimed by [[note043_free_energy_of_reasoning]]. Displayed, not resolved.*

@@ -44,3 +44,6 @@ Open Questions
 Can we detect CTC signatures in real model attention patterns?
 Does training induce more stable CTCs (better "time travel" in thought)?
 Vincit Omnia Veritas — including the future.
+
+---
+*Number collision: #038 is also claimed by [[038_normalized_compression_distance]] and [[note038_free_physics_principle]]. Displayed, not resolved.*

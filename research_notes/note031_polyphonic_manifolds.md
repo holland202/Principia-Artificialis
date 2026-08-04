@@ -201,3 +201,6 @@ A simple figure:
 - Label: ( C_{\text{conflict}} = sum d_{\text{FR}}^2 ).
 
 This can be generated as `figures/note031_polyphonic_manifold.png` in a follow‑up commit.
+
+---
+*Number collision: #031 is also claimed by [[031_category_thought_topos]]. Displayed, not resolved.*
