@@ -111,7 +111,11 @@ same pair.
 reproducing the 2 Type A / 2 Type B split, runs vacuity_lint.py against
 them, and asserts the detection rate is exactly 2 of 4 (exit 1 otherwise).
 It also asserts the P9/P10 pair on embedded clean and defective trees.
-Requires vacuity_lint.py adjacent or on PYTHONPATH; no other dependencies.
+Requires vacuity_lint.py: looked for beside the script, one level up, then
+in ~/vacuity-lint/. Failing all three it fetches the pinned commit 718d103
+from github.com/holland202/vacuity_lint.py and verifies sha256 before use.
+A failed fetch or a hash mismatch exits 1 -- the instrument is never
+silently skipped. Both branches were exercised on device 2026-08-04.
 
 The estate and control measurements (9/26, 2/15 vs 0/347, 34.7 vs 1.2) are
 not reproduced by the reference script — they require cloning 23

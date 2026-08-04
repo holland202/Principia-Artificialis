@@ -7,13 +7,20 @@ the measured detection rate is exactly 2 of 4. Also asserts the P9/P10
 anti-vacuity pair: zero findings on a clean tree, findings on a defective
 one.
 
-Requires vacuity_lint.py adjacent to this script or importable.
+Requires vacuity_lint.py. It is looked for beside this script, one level
+up, and in ~/vacuity-lint/. If none of those exist (cold clone, CI), it
+is fetched from the pinned commit of the public vacuity_lint.py repo and
+checked against a pinned SHA-256. A fetch or hash failure exits 1 --
+the instrument is never silently skipped.
 Exit 0 only if every assertion holds; any failure exits 1.
 """
+import hashlib
 import os
 import subprocess
 import sys
 import tempfile
+import urllib.error
+import urllib.request
 
 # ---------------------------------------------------------------- fixtures
 
@@ -75,7 +82,41 @@ def test_addition():
 '''
 
 
-def find_lint():
+# Pinned so this script measures one fixed instrument, not whatever HEAD is.
+LINT_COMMIT = "718d103bfdc1eea84d2a86a32853ae3472eb6675"
+LINT_SHA256 = "028d48687615b998373279660e4022acfcaa1735ea682a3db83ef8bee940f0d9"
+LINT_URL = (
+    "https://raw.githubusercontent.com/holland202/vacuity_lint.py/"
+    f"{LINT_COMMIT}/vacuity_lint.py"
+)
+
+
+def fetch_lint(dest):
+    """Download the pinned linter to dest. Returns dest, or exits 1."""
+    try:
+        with urllib.request.urlopen(LINT_URL, timeout=30) as r:
+            body = r.read()
+    except (urllib.error.URLError, OSError) as e:
+        sys.exit(
+            f"vacuity_lint.py not found locally and fetch failed: {e}\n"
+            f"  tried {LINT_URL}\n"
+            "  place vacuity_lint.py beside this script and re-run"
+        )
+    got = hashlib.sha256(body).hexdigest()
+    if got != LINT_SHA256:
+        sys.exit(
+            "fetched vacuity_lint.py does not match the pinned hash\n"
+            f"  expected {LINT_SHA256}\n"
+            f"  got      {got}"
+        )
+    with open(dest, "wb") as f:
+        f.write(body)
+    print(f"vacuity_lint.py fetched from pinned commit {LINT_COMMIT[:7]} "
+          f"(sha256 verified)")
+    return dest
+
+
+def find_lint(workdir):
     here = os.path.dirname(os.path.abspath(__file__))
     for cand in (
         os.path.join(here, "vacuity_lint.py"),
@@ -83,8 +124,9 @@ def find_lint():
         os.path.expanduser("~/vacuity-lint/vacuity_lint.py"),
     ):
         if os.path.isfile(cand):
+            print(f"vacuity_lint.py found locally: {cand}")
             return os.path.abspath(cand)
-    sys.exit("vacuity_lint.py not found — place it beside this script")
+    return fetch_lint(os.path.join(workdir, "vacuity_lint.py"))
 
 
 def scan(lint, tree):
@@ -104,10 +146,10 @@ def write(tree, name, body):
 
 
 def main():
-    lint = find_lint()
     failures = []
 
     with tempfile.TemporaryDirectory() as td:
+        lint = find_lint(td)
         # -- P9: clean tree yields zero findings ------------------------
         clean_tree = os.path.join(td, "clean")
         os.makedirs(clean_tree)
