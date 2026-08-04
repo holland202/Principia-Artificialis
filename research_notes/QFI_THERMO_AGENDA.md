@@ -1,4 +1,4 @@
-# Research Roadmap — Principia Artificialis
+# QFI & Thermodynamics — Research Agenda
 
 ## Completed (as of 2026-07-16)
 

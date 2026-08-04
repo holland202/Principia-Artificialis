@@ -1,10 +1,10 @@
 # Principia Artificialis — ROADMAP
 
-**Last updated:** 2026-07-29
+**Last updated:** 2026-08-04
 
-## Current State (July 2026)
+## Current State (August 2026)
 
-- **71 research notes** (9 Verified, 20 Draft, 39 Speculative, 3 Refuted-kept)
+- **74 research notes** — 1 Verified, 10 with verified reference code (3 of those are kept refutations), 2 architecture-verified; the rest Draft or Speculative.
 - 11 runnable reference scripts
 - Multi-author contributions (1 human + 5 AI systems, credited by name)
 - Strong falsification culture and add-only policy
@@ -17,6 +17,7 @@
 2. **Run Exp #001–#003** on real (even small) models and publish results.
 3. **Expand Note #050** experimental harness into a reproducible thermal + seasonal capacity study.
 4. Keep the index and README stats accurate after every addition.
+5. **Open QFI / thermodynamics questions** — see [research_notes/QFI_THERMO_AGENDA.md](research_notes/QFI_THERMO_AGENDA.md); Note #022 is unfinished and three planned figures are unbuilt.
 
 ## Near-term (Q3–Q4 2026)
 
